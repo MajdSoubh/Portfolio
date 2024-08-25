@@ -121,16 +121,16 @@ const NavBar = () => {
           {/* Theme */}
           <button
             className={
-              "ml-3 rounded-full flex items-center justify-center bg-dark p-1 text-light dark:bg-light dark:text-dark"
+              "ml-3 rounded-full flex items-center justify-center bg-dark p-1 text-light dark:bg-light dark:text-dark "
             }
             onClick={() => {
               mode == "dark" ? setMode("light") : setMode("dark");
             }}
           >
             {mode == "dark" ? (
-              <SunIcon className="fill-dark" />
+              <SunIcon className="fill-dark w-[1.6rem]" />
             ) : (
-              <MoonIcon className="fill-dark" />
+              <MoonIcon className="fill-dark w-[1.6rem]" />
             )}
           </button>
         </nav>
@@ -208,9 +208,9 @@ const NavBar = () => {
               }}
             >
               {mode == "dark" ? (
-                <SunIcon className="fill-dark" />
+                <SunIcon className="fill-dark w-[1.6rem]" />
               ) : (
-                <MoonIcon className="fill-dark" />
+                <MoonIcon className="fill-dark w-[1.6rem]" />
               )}
             </button>
           </nav>
