@@ -4,12 +4,12 @@ import Layout from "@/components/Layout";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import EStore from "../../public/images/projects/e-store.png";
-import Surveys from "../../public/images/projects/surveys.png";
-import ZIPURL from "../../public/images/projects/zip-url.png";
+import EStore from "../../public/images/projects/e-store.PNG";
+import Surveys from "../../public/images/projects/surveys.PNG";
+import ZIPURL from "../../public/images/projects/zip-url.PNG";
 import TicTacToe from "../../public/images/projects/tic-tac-toe.png";
 import Console from "../../public/images/projects/console.png";
-import PMS from "../../public/images/projects/pms.png";
+import PMS from "../../public/images/projects/pms.PNG";
 import { motion } from "framer-motion";
 
 const MotionImage = motion(Image);
