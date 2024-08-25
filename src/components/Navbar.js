@@ -3,12 +3,14 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
+  FacebookIcon,
   GithubIcon,
   LinkedInIcon,
-  Medium,
+  MediumIcon,
   MoonIcon,
   SunIcon,
-  TwitterIcon,
+  TelegramIcon,
+  WhatsappIcon,
 } from "./Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
@@ -53,7 +55,7 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-light dark:bg-dark dark:text-light w-full px-32 py-8 font-medium flex items-center justify-between relative z-10 lg:px-16 md:px-12 sm:px-8">
+    <header className="bg-light dark:bg-dark dark:text-light w-full px-32 h-20 font-medium flex items-center justify-between relative z-10 lg:px-16 md:px-12 sm:px-8">
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
@@ -111,11 +113,38 @@ const NavBar = () => {
           <motion.a
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
+            href="https://wa.me/+963987518954"
+            target={"_blank"}
+            className="w-6 mr-2"
+          >
+            <WhatsappIcon className="w-[1.6rem]" />
+          </motion.a>
+          <motion.a
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
             href="https://medium.com/@majdsoubh"
             target={"_blank"}
             className="w-6 mr-2"
           >
-            <Medium className="w-[1.6rem]" />
+            <MediumIcon className="w-[1.6rem]" />
+          </motion.a>
+          <motion.a
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            href="https://www.facebook.com/majd.soubh.9/"
+            target={"_blank"}
+            className="w-6 mr-2"
+          >
+            <FacebookIcon className="w-[1.6rem]" />
+          </motion.a>
+          <motion.a
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            href="https://t.me/+963987518954"
+            target={"_blank"}
+            className="w-6 mr-2"
+          >
+            <TelegramIcon className="w-[1.6rem]" />
           </motion.a>
 
           {/* Theme */}
@@ -177,6 +206,7 @@ const NavBar = () => {
               href="https://github.com/MajdSoubh"
               target={"_blank"}
               className="w-6 mr-2 "
+              toggle={() => setIsOpen(!isOpen)}
             >
               <GithubIcon className="w-[1.6rem]" />
             </motion.a>
@@ -186,6 +216,7 @@ const NavBar = () => {
               href="https://linkedin.com/in/majd-soubh/"
               target={"_blank"}
               className="w-6 mr-2"
+              toggle={() => setIsOpen(!isOpen)}
             >
               <LinkedInIcon className="w-[1.6rem]" />
             </motion.a>
@@ -195,8 +226,39 @@ const NavBar = () => {
               href="https://medium.com/@majdsoubh"
               target={"_blank"}
               className="w-6 mr-2"
+              toggle={() => setIsOpen(!isOpen)}
             >
-              <Medium className="w-[1.6rem]" />
+              <MediumIcon className="w-[1.6rem]" />
+            </motion.a>
+            <motion.a
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              href="https://t.me/+963987518954"
+              target={"_blank"}
+              className="w-6 mr-2"
+              toggle={() => setIsOpen(!isOpen)}
+            >
+              <TelegramIcon className="w-[1.6rem]" />
+            </motion.a>
+            <motion.a
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              href="https://wa.me/+963987518954"
+              target={"_blank"}
+              className="w-6 mr-2"
+              toggle={() => setIsOpen(!isOpen)}
+            >
+              <WhatsappIcon className="w-[1.6rem]" />
+            </motion.a>
+            <motion.a
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              href="https://www.facebook.com/majd.soubh.9/"
+              target={"_blank"}
+              className="w-6 mr-2"
+              toggle={() => setIsOpen(!isOpen)}
+            >
+              <FacebookIcon className="w-[1.6rem]" />
             </motion.a>
             {/* Theme */}
             <button
@@ -205,6 +267,7 @@ const NavBar = () => {
               }
               onClick={() => {
                 mode == "dark" ? setMode("light") : setMode("dark");
+                setIsOpen(!isOpen);
               }}
             >
               {mode == "dark" ? (

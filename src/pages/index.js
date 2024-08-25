@@ -8,7 +8,7 @@ import Articles from "./articles.js";
 
 export default function Home() {
   return (
-    <div className="pt-16">
+    <div className="">
       <About />
       <Statistics />
       <Experience />

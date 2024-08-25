@@ -6,21 +6,24 @@ import Layout from "@/components/Layout";
 
 const About = ({ className = "" }) => {
   return (
-    <Layout className="!p-0 !px-8">
-      <div className="flex items-center justify-between w-full lg:flex-col">
+    <Layout
+      id="about"
+      className=" !p-8 !h-fullView flex items-center justify-center"
+    >
+      <div className="flex items-center justify-center h-full w-full lg:flex-col">
         {/* Image */}
-        <div className="w-1/2 px-8 h-full  lg:hidden sm:hidden text-center">
+        <div className="w-1/2 p-20 2xl:p-16 xl:p-4 lg:p-0  lg:max-h-[50%]  lg:w-full text-center">
           <CodeTag className=" !w-full  text-dark dark:text-light !h-full " />
         </div>
         {/* Intro */}
-        <div className="w-1/2 flex flex-col gap-2 items-center self-center lg:w-full lg:text-center">
+        <div className="w-1/2  lg:max-h-[50%] flex flex-col gap-0 items-center self-center lg:w-full lg:text-center">
           <AnimatedText
             text="Hi all, I'm "
-            className=" !text-6xl text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:text-5xl sm:!text-3xl"
+            className=" !text-6xl text-left xl:!text-5xl lg:!text-center lg:!text-5xl md:text-5xl sm:!text-3xl"
           />
           <AnimatedText
             text="MAJD SOUBH"
-            className=" !text-yellow-500 !text-6xl text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:text-5xl sm:!text-3xl"
+            className=" !text-yellow-500 !text-6xl text-left xl:!text-5xl lg:!text-center lg:!text-5xl md:text-5xl sm:!text-3xl"
           />
           <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
             A Backend Specialist with a solid grounding in front-end tools like
