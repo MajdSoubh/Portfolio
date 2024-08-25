@@ -1,7 +1,4 @@
 {
-  "name": "developer-portfolio-starter-code",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,11 +6,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "eslint": "8.36.0",
-    "eslint-config-next": "13.2.4",
-    "framer-motion": "^10.6.0",
-    "next": "14.1.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "framer-motion": "^11.3.29",
+    "next": "^14.2.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10"
   }
 }
