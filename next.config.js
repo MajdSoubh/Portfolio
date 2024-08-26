@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export", // <=== enables static exports
-  reactStrictMode: true,
+  //   reactStrictMode: true,
+  //   basePath: "/portfolio", // Replace with your GitHub repository name
   images: { unoptimized: true },
 };
 
