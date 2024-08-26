@@ -28,7 +28,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
           </a>
         </h3>
         <span className="font-medium capitalize text-dark/75 dark:text-light/75 xs:text-sm">
-          {time}| {address}
+          {time} | {address}
         </span>
         <p className="font-medium w-full md:text-sm">{work}</p>
       </motion.div>
@@ -45,7 +45,7 @@ const Experience = () => {
   });
   return (
     <Layout>
-      <h2 className="font-bold text-8xl mb-32  md:mb-16 w-full text-center 2xl:!text-7xl lg:!text-6xl  xs:!text-3xl ">
+      <h2 className="font-bold text-6xl mb-32  md:mb-16 w-full text-center  lg:!text-6xl  xs:!text-3xl ">
         Experience
       </h2>
       <div

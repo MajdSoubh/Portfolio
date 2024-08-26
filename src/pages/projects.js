@@ -23,21 +23,23 @@ const FeaturedProject = ({
   github,
 }) => {
   return (
-    <div className="w-full flex items-center justify-between relative rounded-lg  border border-solid border-primary dark:border-primaryDark bg-light  dark:bg-dark shadow-2xl p-6 lg:flex-col  xs:rounded-2xl xs:rounded-br-3xl xs:p-4 ">
+    <div className="w-full h-full flex items-center justify-between relative rounded-lg  border border-solid border-primary dark:border-primaryDark bg-light  dark:bg-dark shadow-2xl p-6 py-4 lg:flex-col  xs:rounded-2xl xs:rounded-br-3xl xs:p-4 ">
       {/* Image */}
-      <div className="w-1/2 lg:w-full cursor-pointer overflow-hidden rounded-lg ">
-        <MotionImage
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.2 }}
-          src={img}
-          alt={title}
-          priority
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="w-full h-auto"
-        />
+      <div className="w-1/2  lg:w-full lg:h-[50%] cursor-pointer overflow-hidden rounded-lg ">
+        <div className="flex items-center justify-center w-full h-full">
+          <MotionImage
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.2 }}
+            src={img}
+            alt={title}
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="w-full "
+          />
+        </div>
       </div>
       {/* Description */}
-      <div className="w-1/2 lg:w-full  flex flex-col items-start justify-between pl-6 lg:pl-0 lg:pt-6">
+      <div className="w-1/2 lg:w-full flex flex-col h-full lg:h-auto items-start justify-around pl-6 lg:pl-0 lg:pt-6">
         <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base">
           {type}
         </span>
@@ -49,7 +51,8 @@ const FeaturedProject = ({
         <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
           {summary}
         </p>
-        <div className="flex items-center my-2 ">
+        {/* Links */}
+        <div className="flex items-center mt-4 justify-between w-full ">
           <Link href={github} className="w-10" target="_blank">
             <GithubIcon />
           </Link>
@@ -57,7 +60,7 @@ const FeaturedProject = ({
             <Link
               href={link}
               target="_blank"
-              className="ml-4  rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark sm:px-4 sm:text-base"
+              className="ml-4  rounded-lg bg-dark text-light p-2 px-4 text-md font-semibold dark:bg-light dark:text-dark sm:px-4 sm:text-base"
             >
               Visit Demo
             </Link>
@@ -136,7 +139,7 @@ products. It is built using Vue, Vuex and Tailwind CSS for the front end, and us
           <FeaturedProject
             title="Survey Time"
             summary="Web application for creating surveys and sharing them with others to gather their responses, built using Vue, Vuex,
-Tailwind CSS as front-end and Laravel as back-end"
+Tailwind CSS as front-end and Laravel as back-end."
             type="Featured Project"
             img={Surveys}
             github="https://github.com/MajdSoubh/Surveys"
@@ -147,7 +150,7 @@ Tailwind CSS as front-end and Laravel as back-end"
           <FeaturedProject
             title="ZIP URL"
             summary="PHP-MVC project aimed at creating and managing short URLs, leveraging the Model-View-Controller (MVC) architectural
-pattern"
+pattern."
             type="Featured Project"
             img={ZIPURL}
             github="https://github.com/MajdSoubh/ZIP-URL"
@@ -165,18 +168,21 @@ need for manual work."
           />
         </div>
 
-        <div className="col-span-6 sm:col-span-12">
-          <Project
+        <div className="col-span-6 xl:col-span-12">
+          <FeaturedProject
             title="Imposiable Tic Tac Toe"
             link="https://majdsoubh.github.io/Tic-Tac-Toe/"
             img={TicTacToe}
+            summary="This is a Tic Tac Toe game developed using HTML, CSS, and JavaScript. The game uses the Minimax algorithm to determine
+the best move for the computer player."
             github="https://github.com/MajdSoubh/Tic-Tac-Toe"
           />
         </div>
-        <div className="col-span-6 sm:col-span-12">
-          <Project
+        <div className="col-span-6 xl:col-span-12">
+          <FeaturedProject
             title="Ask Me (C++ Console)"
             img={Console}
+            summary="AskMe is a C++ console project built using object-oriented concepts that allows users to ask and answer questions."
             github="https://github.com/MajdSoubh/AskMe"
           />
         </div>

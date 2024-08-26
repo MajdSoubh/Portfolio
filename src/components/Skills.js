@@ -25,7 +25,7 @@ const Skill = ({ name, left, top }) => {
 const Skills = () => {
   return (
     <Layout>
-      <h2 className="font-bold text-8xl w-full text-center 2xl:!text-7xl lg:!text-6xl  xs:!text-3xl ">
+      <h2 className="font-bold text-6xl w-full text-center  lg:!text-6xl  xs:!text-3xl ">
         Skills
       </h2>
 

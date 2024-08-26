@@ -33,7 +33,7 @@ const AnimatedText = ({ text, className = "" }) => {
     >
       <motion.h1
         className={
-          "inline-block w-full dark:text-light text-dark font-bold capitalize text-6xl " +
+          "inline-block w-full dark:text-light text-dark font-bold capitalize text-5xl " +
           className
         }
         variants={quote}

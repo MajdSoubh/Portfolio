@@ -10,13 +10,13 @@ const About = ({ className = "" }) => {
       id="about"
       className=" !p-8 !h-fullView flex items-center justify-center"
     >
-      <div className="flex items-center justify-center h-full w-full lg:flex-col">
+      <div className="flex items-center justify-center h-full w-full lg:flex-col ">
         {/* Image */}
-        <div className="w-1/2 p-20 2xl:p-16 xl:p-4 lg:p-0  lg:max-h-[50%]  lg:w-full text-center">
-          <CodeTag className=" !w-full  text-dark dark:text-light !h-full " />
+        <div className="w-[40%] p-20 2xl:p-16 xl:p-8 lg:p-6  lg:!h-[40%] lg:w-full flex items-center justify-center">
+          <CodeTag className=" !w-full !h-full text-dark dark:text-light  " />
         </div>
         {/* Intro */}
-        <div className="w-1/2  lg:max-h-[50%] flex flex-col gap-0 items-center self-center lg:w-full lg:text-center">
+        <div className="w-[60%]  lg:!h-[60%] flex flex-col gap-2 items-center self-center lg:w-full lg:text-center">
           <AnimatedText
             text="Hi all, I'm "
             className=" !text-6xl text-left xl:!text-5xl lg:!text-center lg:!text-5xl md:text-5xl sm:!text-3xl"

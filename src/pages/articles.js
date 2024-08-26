@@ -14,7 +14,7 @@ const Article = ({ title, link, date }) => {
       whileInView={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between gap-2 bg-light text-dark dark:bg-dark dark:text-light first:mt-0 border border-solid border-primary dark:border-primaryDark border-b-4 border-e-4 sm:flex-col "
+      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between gap-2 bg-light text-dark dark:bg-dark dark:text-light first:mt-0 border border-solid border-primary dark:border-primaryDark   sm:flex-col "
     >
       <Link href={link} target="_blank">
         <h2 className=" capitalize font-semibold hover:underline text-xl xs:text-lg">

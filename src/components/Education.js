@@ -20,7 +20,7 @@ const Details = ({ type, time, place, info }) => {
           {type} &nbsp;
         </h3>
         <span className="font-medium capitalize text-dark/75 dark:text-light/75 xs:text-sm">
-          {time}| {place}
+          {time} | {place}
         </span>
         <p className="font-medium w-full md:text-sm">{info}</p>
       </motion.div>
@@ -37,7 +37,7 @@ const Education = () => {
   });
   return (
     <Layout>
-      <h2 className="font-bold text-8xl mb-32  md:mb-16 w-full text-center 2xl:!text-7xl lg:!text-6xl  xs:!text-3xl ">
+      <h2 className="font-bold text-6xl mb-32  md:mb-16 w-full text-center  lg:!text-6xl  xs:!text-3xl ">
         Education
       </h2>
       <div
