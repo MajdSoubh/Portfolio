@@ -29,7 +29,7 @@ const AnimatedNumbers = ({ value }) => {
 
 const Stats = () => {
   return (
-    <Layout id="statistics" className="!py-16">
+    <Layout id="statistics" className="!py-8 md:!py-0">
       <AnimatedText
         text="Keep coding, Keep growing"
         className="mb-10 2xl:!text-6xl lg:!text-5xl  xs:!text-3xl"
