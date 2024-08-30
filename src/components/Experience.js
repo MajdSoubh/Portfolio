@@ -3,7 +3,15 @@ import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
 import Layout from "./Layout";
 
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details = ({
+  position,
+  company,
+  companyLink,
+  time,
+  address,
+  work,
+  accomplishments = [],
+}) => {
   const itemRef = useRef(null);
   return (
     <li
@@ -31,6 +39,15 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
           {time} | {address}
         </span>
         <p className="font-medium w-full md:text-sm">{work}</p>
+        {accomplishments.length && (
+          <ul className=" list-disc ml-4">
+            {accomplishments.map((a, i) => (
+              <li key={i}>
+                <p>{a}</p>
+              </li>
+            ))}
+          </ul>
+        )}
       </motion.div>
     </li>
   );
@@ -45,7 +62,7 @@ const Experience = () => {
   });
   return (
     <Layout>
-      <h2 className="font-bold text-6xl mb-32  md:mb-16 w-full text-center  lg:!text-6xl  xs:!text-3xl ">
+      <h2 className="font-bold mb-16  w-full text-center !text-5xl lg:!text-4xl  xs:!text-3xl">
         Experience
       </h2>
       <div
@@ -64,7 +81,13 @@ const Experience = () => {
             company="SCASE"
             time="2023-Present"
             address="Syria, Tartous"
-            work="Worked with an internationl team responsible for analyzing and improving car localization algorithms to maintain accuracy and stability."
+            work="SCASE LTD, is a subsidiary of Intenta GmbH in Germany, focuses on developing smart sensors and car driving
+assistant products."
+            accomplishments={[
+              "Refactored 6+ key components, improving code efficiency by 30%",
+              "Analyzing and improving car localization algorithms to maintain accuracy and stability",
+              "Implemented comprehensive test suites, ensuring functionality and compliance with intended requirements across multiple features",
+            ]}
           />
         </ul>
       </div>

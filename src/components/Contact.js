@@ -51,7 +51,7 @@ const ContactUs = () => {
   return (
     <Layout>
       <AnimatedText
-        className="mb-10 2xl:!text-6xl lg:!text-5xl  xs:!text-3xl"
+        className="mb-10 !text-5xl lg:!text-4xl  xs:!text-3xl"
         text="Contact Me"
       />
       <form

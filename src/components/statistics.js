@@ -29,10 +29,10 @@ const AnimatedNumbers = ({ value }) => {
 
 const Stats = () => {
   return (
-    <Layout id="statistics" className="!py-8 md:!py-0">
+    <Layout id="statistics" className=" ">
       <AnimatedText
         text="Keep coding, Keep growing"
-        className="mb-10 2xl:!text-6xl lg:!text-5xl  xs:!text-3xl"
+        className="mb-10 2xl:!text-5xl lg:!text-4xl  xs:!text-3xl"
       />
       <div className="w-full ">
         {/* Stats */}

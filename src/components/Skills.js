@@ -1,8 +1,15 @@
-import { motion } from "framer-motion";
-import React from "react";
+import {
+  inView,
+  motion,
+  motionValue,
+  useInView,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
+import React, { useEffect, useRef } from "react";
 import Layout from "./Layout";
 
-const Skill = ({ name, left, top }) => {
+const SkillTree = ({ name, left, top }) => {
   return (
     <motion.div
       className="absolute w-fit flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark cursor-pointer dark:bg-light dark:text-dark lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold"
@@ -22,14 +29,51 @@ const Skill = ({ name, left, top }) => {
   );
 };
 
+const Skill = ({ name, amount }) => {
+  const motionValue = useMotionValue(0);
+  const percentageEle = useRef();
+  const springValue = useSpring(motionValue, { duration: 3000 });
+  const isInView = useInView(percentageEle, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(amount);
+    }
+  }, [motionValue, isInView, amount]);
+
+  springValue.on("change", (latest) => {
+    if (latest.toFixed(0) <= amount) {
+      percentageEle.current.textContent = latest.toFixed(0);
+    }
+  });
+
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="flex justify-between">
+        <p className="font-bold text-xl">{name}</p>
+        <span className="font-bold text-lg mr-1">
+          <span ref={percentageEle}></span>%
+        </span>
+      </div>
+
+      <motion.div
+        initial={{ width: 0 }}
+        whileInView={{ width: `${amount}%`, transition: { duration: 1 } }}
+        viewport={{ once: true }}
+        className="rounded-md h-2 w-0 bg-primary dark:bg-primaryDark"
+      ></motion.div>
+    </div>
+  );
+};
+
 const Skills = () => {
   return (
     <Layout>
-      <h2 className="font-bold text-6xl w-full text-center  lg:!text-6xl  xs:!text-3xl ">
+      <h2 className="font-bold w-full text-center !text-5xl lg:!text-4xl  xs:!text-3xl">
         Skills
       </h2>
 
-      <div className="w-full h-screen relative  rounded-full bg-circularLight dark:bg-circularDark lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd sm:bg-circularLightSm sm:dark:bg-circularDarkSm">
+      {/*   <div className="w-full h-screen relative  rounded-full bg-circularLight dark:bg-circularDark lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd sm:bg-circularLightSm sm:dark:bg-circularDarkSm">
         <motion.div
           className="absolute flex items-center justify-center rounded-full font-semibold bg-dark text-light py-6 px-6 shadow-dark cursor-pointer dark:bg-light dark:text-dark lg:py-4 lg:px-4 md:py-5 md:px-5 md:text-sm xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold"
           whileHover={{ scale: 1.05 }}
@@ -46,19 +90,30 @@ const Skills = () => {
           Web
         </motion.div>
 
-        <Skill name="HTML" left="32%" top="35%" />
-        <Skill name="Tailwind CSS" left="30%" top="62%" />
-        <Skill name="CSS" left="72%" top="65%" />
-        <Skill name="Data Structures" left="78%" top="78%" />
-        <Skill name="OOP" left="35%" top="79%" />
-        <Skill name="Vuejs" left="68%" top="22%" />
-        <Skill name="Algorithms" left="65%" top="38%" />
-        <Skill name="React" left="50%" top="70%" />
-        <Skill name="Mysql" left="30%" top="24%" />
-        <Skill name="Laravel" left="46%" top="18%" />
-        <Skill name="PHP" left="58%" top="83%" />
-        <Skill name="Java Script" left="23%" top="50%" />
-        <Skill name="C++" left="77%" top="50%" />
+        <SkillTree name="HTML" left="32%" top="35%" />
+        <SkillTree name="Tailwind CSS" left="30%" top="62%" />
+        <SkillTree name="CSS" left="72%" top="65%" />
+        <SkillTree name="Data Structures" left="78%" top="78%" />
+        <SkillTree name="OOP" left="35%" top="79%" />
+        <SkillTree name="Vuejs" left="68%" top="22%" />
+        <SkillTree name="Algorithms" left="65%" top="38%" />
+        <SkillTree name="React" left="50%" top="70%" />
+        <SkillTree name="Mysql" left="30%" top="24%" />
+        <SkillTree name="Laravel" left="46%" top="18%" />
+        <SkillTree name="PHP" left="58%" top="83%" />
+        <SkillTree name="Java Script" left="23%" top="50%" />
+        <SkillTree name="C++" left="77%" top="50%" />
+      </div> */}
+      <div className="w-full mt-5 flex flex-col gap-8 md:px-4">
+        <Skill name="Laravel, PHP" amount="80" />
+        <Skill name="Mysql" amount="75" />
+        <Skill name="HTML, CSS, JavaScript, Ajax, JQuery" amount="80" />
+        <Skill name="Vuejs" amount="70" />
+        <Skill name="React" amount="50" />
+        <Skill name="Bootstrap, TailwindCSS" amount="85" />
+        <Skill name="OOP, Design Patterns" amount="70" />
+        <Skill name="Git, Github, Gitlab" amount="80" />
+        <Skill name="C++" amount="65" />
       </div>
     </Layout>
   );

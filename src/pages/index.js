@@ -9,7 +9,7 @@ import ContactUs from "@/components/Contact.js";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <About />
       <Statistics />
       <Experience />

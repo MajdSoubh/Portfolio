@@ -35,6 +35,7 @@ const FeaturedProject = ({
             priority
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="w-full "
+            unoptimized
           />
         </div>
       </div>
@@ -117,7 +118,7 @@ const Projects = () => {
   return (
     <Layout id="projects" className="pt-16">
       <AnimatedText
-        className="mb-10 2xl:!text-6xl lg:!text-5xl  xs:!text-3xl"
+        className="mb-16 !text-5xl lg:!text-4xl  xs:!text-3xl"
         text="Every bug is an opportunity to grow"
       />
       <div className="grid grid-cols-12 gap-24  xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">

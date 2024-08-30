@@ -5,8 +5,7 @@ const useThemeSwitcher = () => {
 
   useEffect(() => {
     const theme = localStorage.getItem("theme");
-    const media = window.matchMedia("(prefer-color-schema: dark)");
-
+    const media = window.matchMedia("(prefers-color-scheme: dark)").matches;
     if (theme) {
       if (theme === "dark") {
         document.documentElement.classList.add("dark");
@@ -16,7 +15,8 @@ const useThemeSwitcher = () => {
         setMode("light");
       }
     } else {
-      const mediaTheme = media.matches ? "dark" : "light";
+      const mediaTheme = media ? "dark" : "light";
+
       if (mediaTheme === "dark") document.documentElement.classList.add("dark");
       setMode(mediaTheme);
     }

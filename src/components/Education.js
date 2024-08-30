@@ -37,7 +37,7 @@ const Education = () => {
   });
   return (
     <Layout>
-      <h2 className="font-bold text-6xl mb-32  md:mb-16 w-full text-center  lg:!text-6xl  xs:!text-3xl ">
+      <h2 className="font-bold  mb-16  w-full text-center !text-5xl lg:!text-4xl  xs:!text-3xl">
         Education
       </h2>
       <div
@@ -60,7 +60,8 @@ const Education = () => {
             type="Master Web Science"
             time="2023-present"
             place="Syrian Virtual University"
-            info="The Master's program in Web Science at the Syrian Virtual University (SVU) is typically covers a broad range of topics, including web development, data mining, information retrieval, cloud computing, and cybersecurity. It aims to equip students with both theoretical foundations and practical skills to excel in web-related careers"
+            info="This program offers advanced expertise in web technologies and internet systems, covering topics like web development,
+data mining, analysis, security, and cloud computing"
           />
         </ul>
       </div>
