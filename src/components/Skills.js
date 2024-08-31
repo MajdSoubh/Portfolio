@@ -29,7 +29,7 @@ const SkillTree = ({ name, left, top }) => {
   );
 };
 
-const Skill = ({ name, amount }) => {
+const Skill = ({ name, amount, className = "" }) => {
   const motionValue = useMotionValue(0);
   const percentageEle = useRef();
   const springValue = useSpring(motionValue, { duration: 3000 });
@@ -48,9 +48,9 @@ const Skill = ({ name, amount }) => {
   });
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className={"flex flex-col gap-2 " + className}>
       <div className="flex justify-between">
-        <p className="font-bold text-xl">{name}</p>
+        <p className="font-medium text-lg md:text-sm mr-2">{name}</p>
         <span className="font-bold text-lg mr-1">
           <span ref={percentageEle}></span>%
         </span>
@@ -104,16 +104,36 @@ const Skills = () => {
         <SkillTree name="Java Script" left="23%" top="50%" />
         <SkillTree name="C++" left="77%" top="50%" />
       </div> */}
-      <div className="w-full mt-5 flex flex-col gap-8 md:px-4">
-        <Skill name="Laravel, PHP" amount="80" />
-        <Skill name="Mysql" amount="75" />
-        <Skill name="HTML, CSS, JavaScript, Ajax, JQuery" amount="80" />
-        <Skill name="Vuejs" amount="70" />
-        <Skill name="React" amount="50" />
-        <Skill name="Bootstrap, TailwindCSS" amount="85" />
-        <Skill name="OOP, Design Patterns" amount="70" />
-        <Skill name="Git, Github, Gitlab" amount="80" />
-        <Skill name="C++" amount="65" />
+      <div className="w-full mt-5 grid grid-cols-2 place-content-center gap-y-8 gap-x-16   md:px-4">
+        <Skill
+          className="md:col-span-2 col-span-1"
+          name="Laravel, PHP"
+          amount="80"
+        />
+        <Skill className="md:col-span-2 col-span-1" name="Mysql" amount="75" />
+        <Skill
+          className="md:col-span-2 col-span-1"
+          name="HTML, CSS, JavaScript, Ajax, JQuery"
+          amount="80"
+        />
+        <Skill className="md:col-span-2 col-span-1" name="Vuejs" amount="70" />
+        <Skill className="md:col-span-2 col-span-1" name="React" amount="50" />
+        <Skill
+          className="md:col-span-2 col-span-1"
+          name="Bootstrap, TailwindCSS"
+          amount="85"
+        />
+        <Skill
+          className="md:col-span-2 col-span-1"
+          name="OOP, Design Patterns"
+          amount="70"
+        />
+        <Skill
+          className="md:col-span-2 col-span-1"
+          name="Git, Github, Gitlab"
+          amount="80"
+        />
+        <Skill className="md:col-span-2 col-span-1" name="C++" amount="65" />
       </div>
     </Layout>
   );

@@ -32,10 +32,8 @@ const FeaturedProject = ({
             transition={{ duration: 0.2 }}
             src={img}
             alt={title}
-            priority
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="w-full "
-            unoptimized
           />
         </div>
       </div>

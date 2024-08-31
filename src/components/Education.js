@@ -4,13 +4,9 @@ import LiIcon from "./LiIcon";
 import Layout from "./Layout";
 
 const Details = ({ type, time, place, info }) => {
-  const itemRef = useRef(null);
   return (
-    <li
-      ref={itemRef}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex  flex-col items-start justify-between md:w-[80%]"
-    >
-      <LiIcon reference={itemRef} />
+    <li className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex  flex-col items-start justify-between md:w-[80%]">
+      <LiIcon />
       <motion.div
         initial={{ y: 60 }}
         whileInView={{ y: 0 }}
@@ -24,6 +20,7 @@ const Details = ({ type, time, place, info }) => {
         </span>
         <p className="font-medium w-full md:text-sm">{info}</p>
       </motion.div>
+      <LiIcon top={"100%"} />
     </li>
   );
 };

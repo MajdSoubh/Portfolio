@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 
-const LiIcon = ({ reference }) => {
+const LiIcon = ({ left = 0, top = 0 }) => {
+  const ref = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: reference,
+    target: ref,
     offset: ["start end", "end center"],
   });
+
   return (
-    <figure className="absolute left-0 stroke-dark dark:stroke-light">
+    <figure
+      ref={ref}
+      className={`absolute  stroke-dark dark:stroke-light`}
+      style={{ left: left, top: top }}
+    >
       <svg
         className=" -rotate-90 md:w-[60px] md:h-[60px] xs:w-[40px] xs:h-[40px]"
         width="75"

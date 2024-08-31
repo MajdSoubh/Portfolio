@@ -12,13 +12,12 @@ const Details = ({
   work,
   accomplishments = [],
 }) => {
-  const itemRef = useRef(null);
   return (
     <li
-      ref={itemRef}
+      id="exp"
       className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex  flex-col items-start justify-between md:w-[80%] "
     >
-      <LiIcon reference={itemRef} />
+      <LiIcon />
       <motion.div
         initial={{ y: 60 }}
         whileInView={{ y: 0 }}
@@ -38,17 +37,18 @@ const Details = ({
         <span className="font-medium capitalize text-dark/75 dark:text-light/75 xs:text-sm">
           {time} | {address}
         </span>
-        <p className="font-medium w-full md:text-sm">{work}</p>
+        <p className="font-medium w-full md:text-sm mb-1">{work}</p>
         {accomplishments.length && (
           <ul className=" list-disc ml-4">
             {accomplishments.map((a, i) => (
-              <li key={i}>
+              <li key={i} className="font-medium w-full text-sm">
                 <p>{a}</p>
               </li>
             ))}
           </ul>
         )}
       </motion.div>
+      <LiIcon top={"100%"} />
     </li>
   );
 };

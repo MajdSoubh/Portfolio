@@ -38,7 +38,7 @@ const Stats = () => {
         {/* Stats */}
         <div className=" flex  justify-between  flex-row items-center ">
           <div className="flex flex-col items-end justify-center xl:items-center">
-            <span className="inline-block text-7xl font-bold xl:self-center md:text-6xl sm:text-5xl xs:text-4xl">
+            <span className="inline-block text-7xl mb-2 font-bold xl:self-center md:text-6xl sm:text-5xl xs:text-4xl">
               <AnimatedNumbers value={400} />+
             </span>
             <h2 className="text-xl font-medium capitalize dark:text-light/75 text-dark/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
@@ -46,7 +46,7 @@ const Stats = () => {
             </h2>
           </div>
           <div className="flex flex-col items-end justify-center">
-            <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl xl:self-center">
+            <span className="inline-block text-7xl mb-2 font-bold md:text-6xl sm:text-5xl xs:text-4xl xl:self-center">
               <AnimatedNumbers value={7} />+
             </span>
             <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
@@ -54,7 +54,7 @@ const Stats = () => {
             </h2>
           </div>
           <div className="flex flex-col items-end justify-center">
-            <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl xl:self-center">
+            <span className="inline-block text-7xl mb-2 font-bold md:text-6xl sm:text-5xl xs:text-4xl xl:self-center">
               <AnimatedNumbers value={2} />+
             </span>
             <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm">
