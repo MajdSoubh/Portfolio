@@ -8,7 +8,7 @@ const About = ({ className = "" }) => {
   return (
     <Layout
       id="about"
-      className=" !p-8 !h-fullView flex items-center justify-center"
+      className=" !py-2 !px-8 !h-fullView flex items-center justify-center"
     >
       <div className="flex items-center justify-center h-full w-full lg:flex-col ">
         {/* Image */}
