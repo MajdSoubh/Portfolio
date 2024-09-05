@@ -135,7 +135,7 @@ const Qualification = () => {
   return (
     <Layout>
       <AnimatedText
-        className="mb-10 !text-5xl lg:!text-4xl  xs:!text-3xl"
+        className="mb-8 !text-5xl lg:!text-4xl  xs:!text-3xl"
         text="Qualification"
         extra="My Journey"
       />
@@ -146,7 +146,7 @@ const Qualification = () => {
           onClick={showWork}
           className={`font-bold flex items-center py-2 px-3 gap-4 text-xl tracking-wide  transition-all ${
             IsWork
-              ? " rounded-md bg-gray-600 dark:bg-primaryDark/70 text-white "
+              ? " rounded-md  bg-primary/80  text-white "
               : "text-gray-600 dark:text-gray-200"
           }`}
         >
@@ -162,7 +162,7 @@ const Qualification = () => {
           onClick={showEduction}
           className={`font-bold items-center flex py-2 px-3 gap-4 text-xl tracking-wide  transition-all ${
             !IsWork
-              ? "  rounded-md bg-gray-600 dark:bg-primaryDark/70 text-white "
+              ? "  rounded-md bg-primary/80 text-white "
               : "text-gray-600 dark:text-gray-200"
           }`}
         >

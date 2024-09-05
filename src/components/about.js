@@ -34,7 +34,7 @@ const About = ({ className = "" }) => {
           </p>
           <div className="flex items-center gap-6 self-start mt-2 lg:self-center">
             <Link
-              href="/MY-CV.pdf"
+              href="./Majd-Soubh-Resume.pdf"
               target="_blank"
               download={true}
               className="flex items-center text-light bg-dark p-2 px-5 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark dark:text-dark dark:bg-light hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base "

@@ -72,7 +72,7 @@ const AnimatedText = ({
           }}
           viewport={{ once: true }}
           className={
-            "font-semibold text-dark/60 text-base mt-2 dark:text-gray-300 " +
+            "font-semibold text-primary text-base mt-2 dark:text-primaryDark " +
             extraClassName
           }
         >

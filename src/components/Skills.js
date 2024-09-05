@@ -9,7 +9,7 @@ const SkillList = ({ children, name, className = "", icon = null }) => {
   return (
     <div
       className={
-        "w-full overflow-hidden self-start cursor-pointer dark:bg-white dark:text-dark bg-gray-600 text-light border-gray-600  px-4 py-3 rounded-xl transition-colors  border-dark  hover:border-2 hover:text-dark hover:bg-white dark:hover:border-white dark:hover:!text-white dark:hover:bg-dark " +
+        "w-full overflow-hidden self-start cursor-pointer   px-4 py-3 rounded-xl transition-all  border-primary  border-2 hover:text-dark hover:bg-white dark:border-primary dark:!text-white dark:bg-dark hover:shadow hover:shadow-primary " +
         (isOpen
           ? " border-2 !bg-white dark:!text-light dark:!bg-dark dark:border-white !text-dark "
           : " ") +
@@ -30,7 +30,7 @@ const SkillList = ({ children, name, className = "", icon = null }) => {
         </div>
         <div>
           <DownArrowIcon
-            className={` transition-transform !w-8 ${
+            className={` transition-transform !w-8 fill-primary ${
               isOpen ? " -rotate-[180deg]" : " "
             }`}
           />
@@ -103,7 +103,7 @@ const Skills = () => {
 
       <div className=" w-full grid grid-cols-2 gap-8 ">
         <SkillList
-          icon={<FrontendIcon className={"!w-8"} />}
+          icon={<FrontendIcon className={"!w-8 "} />}
           name="Frontend Stack"
           className="col-span-1 lg:col-span-2"
         >
@@ -134,7 +134,7 @@ const Skills = () => {
           />
         </SkillList>
         <SkillList
-          icon={<BackendIcon className={"!w-8"} />}
+          icon={<BackendIcon className={"!w-8 "} />}
           name="Backend Stack"
           className="col-span-1 lg:col-span-2"
         >

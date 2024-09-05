@@ -5,8 +5,3 @@
 :root {
   scroll-behavior: smooth !important;
 }
-@layer utilities {
-  .expand {
-    max-height: 100vh;
-  }
-}

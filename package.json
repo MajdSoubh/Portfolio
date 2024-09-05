@@ -4,8 +4,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build-static": "next build  && npm run build-static-repair-index",
-    "build-static-repair-index": "replace-in-files --string \"/_next/static\" --replacement \"./_next/static\" out/index.html"
+    "build-static": "next build  && npm run build-static-repair-index && npm run build-static-repair-index-2",
+    "build-static-repair-index": "replace-in-files --string \"/_next/static\" --replacement \"./_next/static\"  out/index.html out/404.html",
+    "build-static-repair-index-2": "replace-in-files --string \"/Majd-Soubh\" --replacement \"./Majd-Soubh\"  out/index.html"
   },
   "dependencies": {
     "framer-motion": "^11.3.29",

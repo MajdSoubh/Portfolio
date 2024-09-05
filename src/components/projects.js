@@ -19,6 +19,7 @@ const FeaturedProject = ({
   summary,
   tags = [],
   img,
+  imgProd = "./",
   link = null,
   github,
   className = "",
@@ -43,8 +44,9 @@ const FeaturedProject = ({
           <MotionImage
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
-            src={img}
+            src={process.env.NODE_ENV == "development" ? img : imgProd}
             alt={title}
+            priority
             className={"w-full h-full "}
           />
         </div>
@@ -76,7 +78,7 @@ const FeaturedProject = ({
             <Link
               href={link}
               target="_blank"
-              className="ml-4  rounded-lg bg-dark text-light p-2 px-4 text-md font-semibold dark:bg-light dark:text-dark sm:px-4 sm:text-base"
+              className="ml-4  rounded-lg bg-primary/75 text-light p-2 px-4 text-md font-semibold  sm:px-4 sm:text-base"
             >
               Visit Demo
             </Link>
@@ -95,6 +97,7 @@ const Projects = () => {
         "The online store application enables administrators to add products and view reports, while allowing users to purchase products.",
       link: "http://lcommerce.atwebpages.com/home",
       tags: ["Laravel", "Vue", "Vuex", "TailwindCSS"],
+      imgProd: "./images/projects/e-store.png",
       img: EStore,
       github: "https://github.com/MajdSoubh/Laravel-Vue-Ecommerce",
     },
@@ -105,6 +108,7 @@ const Projects = () => {
       link: "http://lcommerce.atwebpages.com/home",
       tags: ["Laravel", "Vue", "Vuex"],
       img: Surveys,
+      imgProd: "./images/projects/surveys.png",
       github: "https://github.com/MajdSoubh/Surveys",
     },
     {
@@ -114,6 +118,7 @@ const Projects = () => {
       link: "http://lcommerce.atwebpages.com/home",
       tags: ["PHP", "JS", "MVC"],
       img: ZIPURL,
+      imgProd: "./images/projects/zip-url.png",
       github: "https://github.com/MajdSoubh/ZIP-URL",
     },
     {
@@ -122,8 +127,8 @@ const Projects = () => {
         "PMS web application designed to streamline operations within pharmacies, reducing the need for manual work.",
       link: "http://lcommerce.atwebpages.com/home",
       img: PMS,
+      imgProd: "./images/projects/pms.png",
       tags: ["Laravel", "React", "TailwindCSS"],
-
       github: "https://github.com/MajdSoubh/PMS",
     },
     {
@@ -132,7 +137,7 @@ const Projects = () => {
         "This Tic Tac Toe game uses the Minimax algorithm to determine the best move for the computer player.",
       link: "http://lcommerce.atwebpages.com/home",
       tags: ["HTML", "CSS", "JS"],
-
+      imgProd: "./images/projects/tic-tac-toe.png",
       img: TicTacToe,
       github: "https://github.com/MajdSoubh/Tic-Tac-Toe/",
       link: "https://majdsoubh.github.io/Tic-Tac-Toe/",
@@ -144,6 +149,7 @@ const Projects = () => {
       github: "https://github.com/MajdSoubh/AskMe",
       link: "http://lcommerce.atwebpages.com/home",
       tags: ["C++", "OOB"],
+      imgProd: "./images/projects/console.png",
       img: Console,
     },
   ];
@@ -175,7 +181,7 @@ const Projects = () => {
           onClick={handleGoToLeft}
           style={{ opacity: index > 0 ? 1 : 0 }}
         >
-          <LeftArrow className={"!w-7"} />
+          <LeftArrow className={"!w-7 fill-primary"} />
         </div>
         {/* View */}
         <div className="transition-all">
@@ -186,18 +192,19 @@ const Projects = () => {
             link={projects[index].link}
             type={projects[index].type}
             tags={projects[index].tags}
+            imgProd={projects[index].imgProd}
             img={projects[index].img}
             github={projects[index].github}
           />
         </div>
         {/* Right Arrow */}
         <div
-          className="flex items-center justify-center"
+          className="flex items-center justify-center "
           onClick={handleGoToRight}
         >
           <RightArrow
             style={{ opacity: index + 1 < projects.length ? 1 : 0 }}
-            className={"!w-7"}
+            className={"!w-7 fill-primary"}
           />
         </div>
       </div>
