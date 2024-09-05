@@ -24,6 +24,7 @@ const About = ({ className = "" }) => {
           />
           <AnimatedText
             text="MAJD SOUBH"
+            className="!mb-0"
             titleClassName=" !text-yellow-500 !text-6xl text-left xl:!text-5xl lg:!text-center lg:!text-5xl md:text-5xl sm:!text-3xl"
           />
           <p className="my-4 text-base font-medium md:text-sm sm:text-xs">

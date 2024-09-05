@@ -10,9 +10,7 @@ const SkillList = ({ children, name, className = "", icon = null }) => {
     <div
       className={
         "w-full overflow-hidden self-start cursor-pointer   px-4 py-3 rounded-xl transition-all  border-primary  border-2 hover:text-dark hover:bg-white dark:border-primary dark:!text-white dark:bg-dark hover:shadow hover:shadow-primary " +
-        (isOpen
-          ? " border-2 !bg-white dark:!text-light dark:!bg-dark dark:border-white !text-dark "
-          : " ") +
+        (isOpen ? " " : " ") +
         className
       }
     >
