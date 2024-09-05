@@ -4,6 +4,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      margin: {
+        custom: "370px",
+      },
       fontFamily: {
         mont: ["var(--font-mont)"],
       },

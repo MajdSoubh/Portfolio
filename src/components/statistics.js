@@ -29,7 +29,7 @@ const AnimatedNumbers = ({ value }) => {
 
 const Stats = () => {
   return (
-    <Layout id="statistics" className=" ">
+    <Layout id="statistics">
       <AnimatedText
         text="Keep coding, Keep growing"
         className="mb-10 2xl:!text-5xl lg:!text-4xl  xs:!text-3xl"

@@ -8,7 +8,6 @@
     "build-static-repair-index": "replace-in-files --string \"/_next/static\" --replacement \"./_next/static\" out/index.html"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
     "framer-motion": "^11.3.29",
     "next": "^14.2.6",
     "react": "^18.3.1",

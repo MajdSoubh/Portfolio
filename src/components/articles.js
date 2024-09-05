@@ -14,14 +14,14 @@ const Article = ({ title, link, date }) => {
       whileInView={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       viewport={{ once: true }}
-      className="relative w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between gap-2 bg-light text-dark dark:bg-dark dark:text-light first:mt-0 border border-solid border-primary dark:border-primaryDark   sm:flex-col "
+      className="relative transition-colors w-full p-4 py-6 my-4 rounded-xl flex items-center justify-between gap-2   first:mt-0 bg-gray-600 text-light dark:bg-white  dark:!text-dark border-dark  hover:border-2 hover:text-dark hover:bg-white dark:hover:border-white dark:hover:!text-white dark:hover:bg-dark   sm:flex-col "
     >
       <Link href={link} target="_blank">
         <h2 className=" capitalize font-semibold hover:underline text-xl xs:text-lg">
           {title}
         </h2>
       </Link>
-      <span className="text-primary font-semibold pl-4 dark:text-primaryDark sm:self-start sm:pl-0  xs:text-sm">
+      <span className="font-semibold pl-4  sm:self-start sm:pl-0  xs:text-sm">
         {date}
       </span>
     </motion.li>
@@ -30,7 +30,7 @@ const Article = ({ title, link, date }) => {
 
 const FeaturedArticle = ({ title, summary, img, link, time }) => {
   return (
-    <li className=" relative col-span-1 w-full  rounded-xl  border border-solid border-primary dark:border-primaryDark bg-light dark:bg-dark p-8">
+    <li className=" relative col-span-1 w-full  rounded-xl  border border-solid  bg-light dark:bg-dark p-8">
       {/* Image */}
       <Link
         className="w-full inline-block cursor-pointer overflow-hidden rounded-lg"
@@ -65,7 +65,8 @@ const Articles = () => {
       {/* Articles */}
       <AnimatedText
         className="mb-10 !text-5xl lg:!text-4xl  xs:!text-3xl"
-        text="All Articles"
+        text="Articles"
+        extra="My Published Articles"
       />
 
       <ul>

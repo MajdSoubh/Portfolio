@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Layout from "./Layout";
 import AnimatedText from "./AnimatedText";
+import { LocationIcon, MailIcon, PhoneIcon } from "./Icons";
+import { motion } from "framer-motion";
 
 const CustomInput = ({ name, label, type = "text" }) => (
   <div className="w-full flex  justify-center items-center">
@@ -26,50 +28,62 @@ const CustomInput = ({ name, label, type = "text" }) => (
 );
 
 const ContactUs = () => {
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_wed72jh",
-        "template_oqgwup6",
-        form.current,
-        "BGAn9WBywi6SJ1OyA"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
-
   return (
-    <Layout>
+    <Layout className="sm:px-8">
       <AnimatedText
         className="mb-10 !text-5xl lg:!text-4xl  xs:!text-3xl"
         text="Contact Me"
+        extra="Get in Touch"
       />
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        className="mx-auto w-[70%] lg:w-full"
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        viewport={{ once: true }}
+        whileInView={{ opacity: 1, transition: { delay: 0.2, duration: 0.4 } }}
+        className="w-full mx-auto justify-between items-center gap-8 flex md:items-start md:flex-col "
       >
-        <div className="flex flex-col gap-4 justify-center items-center">
-          <CustomInput label="Name" name="from_name" type="text" />
-          <CustomInput label="Email" name="from_email" type="email" />
-          <CustomInput label="Message" name="message" type="textarea" />
-          <div className="self-end">
-            <button className="px-10 py-1.5 rounded uppercase font-semibold  text-lg xs:text-md hover:shadow hover:shadow-primary hover:bg-primary/85 dark:hover:bg-primaryDark/85 dark:hover:shadow-primaryDark text-light dark:text-dark cursor-pointer bg-primary dark:bg-primaryDark transition-all">
-              Send
-            </button>
+        {/* Phone */}
+        <div className="flex items-center justify-center gap-6">
+          {/* Icon */}
+          <div>
+            <PhoneIcon
+              className={"!w-10 fill-gray-700 dark:fill-primaryDark"}
+            />
+          </div>
+          {/* Info */}
+          <div className="flex flex-col gap-1">
+            <p className="font-bold text-xl">Call Me</p>
+            <span className="block">+963987518954</span>
           </div>
         </div>
-      </form>
+        {/* Email */}
+        <div className="flex items-center justify-center gap-6">
+          {/* Icon */}
+          <div>
+            <MailIcon className={"!w-10 fill-gray-700 dark:fill-primaryDark"} />
+          </div>
+          {/* Info */}
+          <div className="flex flex-col gap-1">
+            <p className="font-bold text-xl">Email Me</p>
+            <span className="block">majd-52@hotmail.com</span>
+          </div>
+        </div>
+
+        {/* Location */}
+        <div className="flex items-center justify-center gap-6">
+          {/* Icon */}
+          <div>
+            <LocationIcon
+              className={"!w-10 fill-gray-700 dark:fill-primaryDark"}
+            />
+          </div>
+          {/* Info */}
+          <div className="flex flex-col gap-1">
+            <p className="font-bold text-xl">Location</p>
+            <span className="block">Syria, Tartous</span>
+          </div>
+        </div>
+      </motion.div>
     </Layout>
   );
 };

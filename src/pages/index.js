@@ -1,23 +1,23 @@
 import Skills from "@/components/Skills";
-import Experience from "@/components/Experience";
-import Education from "@/components/Education";
-import Statistics from "@/components/statistics.js";
-import About from "@/components/about.js";
-import Projects from "@/components/projects.js";
-import Articles from "@/components/articles.js";
+import Qualification from "@/components/Qualification";
+import Statistics from "@/components/Statistics.js";
+import About from "@/components/About.js";
+import Projects from "@/components/Projects.js";
+import Articles from "@/components/Articles.js";
 import ContactUs from "@/components/Contact.js";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div>
       <About />
       <Statistics />
-      <Experience />
-      <Education />
+      <Qualification />
       <Skills />
       <Projects />
       <Articles />
       <ContactUs />
+      <Footer />
 
       {/* <HireMe /> */}
     </div>

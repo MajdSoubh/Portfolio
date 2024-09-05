@@ -59,7 +59,7 @@ const NavBar = () => {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className=" flex-col items-center justify-center hidden lg:flex"
+        className=" flex-col fixed top-6 left-6 opacity-60 hover:opacity-100 transition-opacity items-center justify-center hidden lg:flex"
       >
         <span
           className={`bg-dark dark:bg-light transition-all duration-100 ease-out  block h-0.5 w-6 rounded-sm ${

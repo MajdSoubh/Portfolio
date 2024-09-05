@@ -1,21 +1,12 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const quote = {
-  initial: {},
-  animate: {
-    transition: {
-      delay: 0.5,
-      staggerChildren: 0.08,
-    },
-  },
-};
 const singleWord = {
   initial: {
     opacity: 0,
     y: 50,
   },
-  animate: {
+  animation: {
     y: 0,
     opacity: 1,
     transition: {
@@ -24,21 +15,37 @@ const singleWord = {
   },
 };
 
-const AnimatedText = ({ text, className = "" }) => {
+const AnimatedText = ({
+  text,
+  extra = null,
+  className = "",
+  titleClassName = "",
+  extraClassName,
+}) => {
   return (
-    <div
+    <motion.div
       className={
-        "w-full mx-auto py-2 flex items-center justify-center text-center dark:text-light sm:py-0"
+        "w-full mx-auto py-2 flex flex-col items-center justify-center text-center  dark:text-light sm:py-0 mb-16  " +
+        className
       }
     >
       <motion.h1
+        initial={{
+          opacity: 0,
+          y: 50,
+        }}
+        whileInView={{
+          y: 0,
+          opacity: 1,
+          transition: {
+            duration: 0.8,
+          },
+        }}
+        viewport={{ once: true }}
         className={
-          "inline-block w-full dark:text-light text-dark font-bold capitalize text-5xl " +
-          className
+          "inline-block w-full dark:text-light text-dark/85 font-bold capitalize !text-5xl lg:!text-4xl  xs:!text-3xl " +
+          titleClassName
         }
-        variants={quote}
-        initial="initial"
-        animate="animate"
       >
         {text.split(" ").map((word, index) => (
           <motion.span
@@ -50,7 +57,29 @@ const AnimatedText = ({ text, className = "" }) => {
           </motion.span>
         ))}
       </motion.h1>
-    </div>
+      {extra && (
+        <motion.p
+          initial={{
+            opacity: 0,
+            y: 50,
+          }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              duration: 0.8,
+            },
+          }}
+          viewport={{ once: true }}
+          className={
+            "font-semibold text-dark/60 text-base mt-2 dark:text-gray-300 " +
+            extraClassName
+          }
+        >
+          {extra}
+        </motion.p>
+      )}
+    </motion.div>
   );
 };
 

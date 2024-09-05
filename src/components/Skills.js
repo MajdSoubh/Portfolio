@@ -1,34 +1,59 @@
-import {
-  inView,
-  motion,
-  motionValue,
-  useInView,
-  useMotionValue,
-  useSpring,
-} from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 import Layout from "./Layout";
+import { BackendIcon, DownArrowIcon, FrontendIcon } from "./Icons";
+import AnimatedText from "./AnimatedText";
 
-const SkillTree = ({ name, left, top }) => {
+const SkillList = ({ children, name, className = "", icon = null }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <motion.div
-      className="absolute w-fit flex items-center justify-center rounded-full font-semibold bg-dark text-light py-3 px-6 shadow-dark cursor-pointer dark:bg-light dark:text-dark lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold"
-      whileHover={{ scale: 1.05 }}
-      initial={{ left: "50%", top: "50%", x: "-50%", y: "-50%" }}
-      whileInView={{
-        left: left,
-        top: top,
-        x: "-50%",
-        y: "-50%",
-        transition: { duration: 1.5 },
-      }}
-      viewport={{ once: true }}
+    <div
+      className={
+        "w-full overflow-hidden self-start cursor-pointer dark:bg-white dark:text-dark bg-gray-600 text-light border-gray-600  px-4 py-3 rounded-xl transition-colors  border-dark  hover:border-2 hover:text-dark hover:bg-white dark:hover:border-white dark:hover:!text-white dark:hover:bg-dark " +
+        (isOpen
+          ? " border-2 !bg-white dark:!text-light dark:!bg-dark dark:border-white !text-dark "
+          : " ") +
+        className
+      }
     >
-      {name}
-    </motion.div>
+      {/* Interface */}
+      <div
+        className="flex justify-between items-center"
+        onClick={() => {
+          setIsOpen(!isOpen);
+        }}
+      >
+        <div className="flex gap-4 items-center">
+          {icon}
+
+          <p className="font-bold text-xl tracking-widest">{name}</p>
+        </div>
+        <div>
+          <DownArrowIcon
+            className={` transition-transform !w-8 ${
+              isOpen ? " -rotate-[180deg]" : " "
+            }`}
+          />
+        </div>
+      </div>
+      {/* Menu */}
+
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{
+            opacity: 1,
+            height: "auto",
+            transition: { duration: 0.4 },
+          }}
+          className={"w-full  my-8 flex flex-col gap-4"}
+        >
+          {children}
+        </motion.div>
+      )}
+    </div>
   );
 };
-
 const Skill = ({ name, amount, className = "" }) => {
   const motionValue = useMotionValue(0);
   const percentageEle = useRef();
@@ -42,6 +67,7 @@ const Skill = ({ name, amount, className = "" }) => {
   }, [motionValue, isInView, amount]);
 
   springValue.on("change", (latest) => {
+    if (!latest || !percentageEle.current) return;
     if (latest.toFixed(0) <= amount) {
       percentageEle.current.textContent = latest.toFixed(0);
     }
@@ -69,71 +95,71 @@ const Skill = ({ name, amount, className = "" }) => {
 const Skills = () => {
   return (
     <Layout>
-      <h2 className="font-bold w-full text-center !text-5xl lg:!text-4xl  xs:!text-3xl">
-        Skills
-      </h2>
+      <AnimatedText
+        className="mb-10 !text-5xl lg:!text-4xl  xs:!text-3xl"
+        text="Skills"
+        extra="My Technical Skills"
+      />
 
-      {/*   <div className="w-full h-screen relative  rounded-full bg-circularLight dark:bg-circularDark lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd sm:bg-circularLightSm sm:dark:bg-circularDarkSm">
-        <motion.div
-          className="absolute flex items-center justify-center rounded-full font-semibold bg-dark text-light py-6 px-6 shadow-dark cursor-pointer dark:bg-light dark:text-dark lg:py-4 lg:px-4 md:py-5 md:px-5 md:text-sm xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold"
-          whileHover={{ scale: 1.05 }}
-          initial={{ left: "50%", top: "50%", x: "-50%", y: "-50%" }}
-          whileInView={{
-            left: "50%",
-            top: "50%",
-            x: "-50%",
-            y: "-50%",
-            transition: { duration: 1.5 },
-          }}
-          viewport={{ once: true }}
+      <div className=" w-full grid grid-cols-2 gap-8 ">
+        <SkillList
+          icon={<FrontendIcon className={"!w-8"} />}
+          name="Frontend Stack"
+          className="col-span-1 lg:col-span-2"
         >
-          Web
-        </motion.div>
-
-        <SkillTree name="HTML" left="32%" top="35%" />
-        <SkillTree name="Tailwind CSS" left="30%" top="62%" />
-        <SkillTree name="CSS" left="72%" top="65%" />
-        <SkillTree name="Data Structures" left="78%" top="78%" />
-        <SkillTree name="OOP" left="35%" top="79%" />
-        <SkillTree name="Vuejs" left="68%" top="22%" />
-        <SkillTree name="Algorithms" left="65%" top="38%" />
-        <SkillTree name="React" left="50%" top="70%" />
-        <SkillTree name="Mysql" left="30%" top="24%" />
-        <SkillTree name="Laravel" left="46%" top="18%" />
-        <SkillTree name="PHP" left="58%" top="83%" />
-        <SkillTree name="Java Script" left="23%" top="50%" />
-        <SkillTree name="C++" left="77%" top="50%" />
-      </div> */}
-      <div className="w-full mt-5 grid grid-cols-2 place-content-center gap-y-8 gap-x-16   md:px-4">
-        <Skill
-          className="md:col-span-2 col-span-1"
-          name="Laravel, PHP"
-          amount="80"
-        />
-        <Skill className="md:col-span-2 col-span-1" name="Mysql" amount="75" />
-        <Skill
-          className="md:col-span-2 col-span-1"
-          name="HTML, CSS, JavaScript, Ajax, JQuery"
-          amount="80"
-        />
-        <Skill className="md:col-span-2 col-span-1" name="Vuejs" amount="70" />
-        <Skill className="md:col-span-2 col-span-1" name="React" amount="50" />
-        <Skill
-          className="md:col-span-2 col-span-1"
-          name="Bootstrap, TailwindCSS"
-          amount="85"
-        />
-        <Skill
-          className="md:col-span-2 col-span-1"
-          name="OOP, Design Patterns"
-          amount="70"
-        />
-        <Skill
-          className="md:col-span-2 col-span-1"
-          name="Git, Github, Gitlab"
-          amount="80"
-        />
-        <Skill className="md:col-span-2 col-span-1" name="C++" amount="65" />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="HTML, CSS"
+            amount="80"
+          />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="JavaScript, Ajax, JQuery"
+            amount="80"
+          />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="Vuejs"
+            amount="70"
+          />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="React"
+            amount="50"
+          />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="Bootstrap, TailwindCSS"
+            amount="85"
+          />
+        </SkillList>
+        <SkillList
+          icon={<BackendIcon className={"!w-8"} />}
+          name="Backend Stack"
+          className="col-span-1 lg:col-span-2"
+        >
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="Laravel, PHP"
+            amount="80"
+          />
+          <Skill className="md:col-span-2 col-span-1" name="C++" amount="65" />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="Mysql"
+            amount="75"
+          />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="OOP, Design Patterns"
+            amount="70"
+          />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="Git, Github, Gitlab"
+            amount="80"
+          />
+        </SkillList>
       </div>
     </Layout>
   );

@@ -19,11 +19,12 @@ const About = ({ className = "" }) => {
         <div className="w-[60%]  lg:!h-[60%] flex flex-col gap-2 items-center self-center lg:w-full lg:text-center">
           <AnimatedText
             text="Hi all, I'm "
-            className=" !text-6xl text-left xl:!text-5xl lg:!text-center lg:!text-5xl md:text-5xl sm:!text-3xl"
+            className="!mb-0"
+            titleClassName=" !text-6xl  text-left xl:!text-5xl lg:!text-center lg:!text-5xl md:text-5xl sm:!text-3xl"
           />
           <AnimatedText
             text="MAJD SOUBH"
-            className=" !text-yellow-500 !text-6xl text-left xl:!text-5xl lg:!text-center lg:!text-5xl md:text-5xl sm:!text-3xl"
+            titleClassName=" !text-yellow-500 !text-6xl text-left xl:!text-5xl lg:!text-center lg:!text-5xl md:text-5xl sm:!text-3xl"
           />
           <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
             A Backend Specialist with a solid grounding in front-end tools like
