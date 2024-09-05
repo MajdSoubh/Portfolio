@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t-2 border-solid border-primary dark:border-primary  dark:text-light  font-medium text-lg sm:text-base ">
+    <footer className="w-full border-t-2 border-solid border-dark dark:border-white  dark:text-light  font-medium text-lg sm:text-base ">
       <Layout className="!py-10 md:!py-6  flex items-center justify-between lg:flex-col gap-4">
         <span>{new Date().getFullYear()} &copy; All Rights Reserved</span>
         <Link href="/"> Majd Soubh</Link>

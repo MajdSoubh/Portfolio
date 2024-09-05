@@ -24,7 +24,7 @@ const FeaturedProject = ({
   github,
   className = "",
 }) => {
-  console.log(process.env.VERCEL_ENV);
+  console.log(process.env);
   return (
     <motion.div
       key={title}
@@ -45,11 +45,7 @@ const FeaturedProject = ({
           <MotionImage
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
-            src={
-              process.env.NODE_ENV == "development" || process.env.VERCEL_ENV
-                ? img
-                : imgProd
-            }
+            src={img}
             alt={title}
             className={"w-auto h-auto object-fill "}
           />

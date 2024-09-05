@@ -23,7 +23,7 @@ const ContactUs = () => {
         <div className="flex items-center justify-center gap-6">
           {/* Icon */}
           <div>
-            <PhoneIcon className={"!w-10  fill-primaryDark"} />
+            <PhoneIcon className={"!w-10  fill-dark dark:fill-white"} />
           </div>
           {/* Info */}
           <div className="flex flex-col gap-1">
@@ -35,7 +35,7 @@ const ContactUs = () => {
         <div className="flex items-center justify-center gap-6">
           {/* Icon */}
           <div>
-            <MailIcon className={"!w-10  fill-primaryDark"} />
+            <MailIcon className={"!w-10  fill-dark dark:fill-white"} />
           </div>
           {/* Info */}
           <div className="flex flex-col gap-1">
@@ -48,7 +48,7 @@ const ContactUs = () => {
         <div className="flex items-center justify-center gap-6">
           {/* Icon */}
           <div>
-            <LocationIcon className={"!w-10  fill-primaryDark"} />
+            <LocationIcon className={"!w-10  fill-dark dark:fill-white"} />
           </div>
           {/* Info */}
           <div className="flex flex-col gap-1">

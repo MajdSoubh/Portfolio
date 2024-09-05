@@ -9,7 +9,7 @@ const SkillList = ({ children, name, className = "", icon = null }) => {
   return (
     <div
       className={
-        "w-full overflow-hidden self-start cursor-pointer   px-4 py-3 rounded-xl transition-all  border-primary  border-2 hover:text-dark hover:bg-white dark:border-primary dark:!text-white dark:bg-dark hover:shadow hover:shadow-primary " +
+        "w-full overflow-hidden self-start cursor-pointer   px-4 py-3 rounded-xl transition-all  border-dark  border-2 hover:text-dark hover:bg-white dark:border-white dark:!text-white dark:bg-dark hover:shadow hover:shadow-dark dark:hover:shadow-white " +
         (isOpen ? " " : " ") +
         className
       }
@@ -28,7 +28,7 @@ const SkillList = ({ children, name, className = "", icon = null }) => {
         </div>
         <div>
           <DownArrowIcon
-            className={` transition-transform !w-8 fill-primary ${
+            className={` transition-transform !w-8 fill-dark dark:fill-white ${
               isOpen ? " -rotate-[180deg]" : " "
             }`}
           />

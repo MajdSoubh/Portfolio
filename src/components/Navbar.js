@@ -95,11 +95,20 @@ const NavBar = () => {
           <motion.a
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
+            href="https://medium.com/@majdsoubh"
+            target={"_blank"}
+            className="w-6 mr-2"
+          >
+            <MediumIcon className="w-[1.8rem] !stroke-dark dark:!stroke-light fill-dark " />
+          </motion.a>
+          <motion.a
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
             href="https://github.com/MajdSoubh"
             target={"_blank"}
             className="w-6 mr-2 "
           >
-            <GithubIcon className="w-[1.8rem] !stroke-primary !fill-primary" />
+            <GithubIcon className="w-[1.8rem] !stroke-dark dark:!stroke-light !fill-dark dark:!fill-light" />
           </motion.a>
           <motion.a
             whileHover={{ y: -2 }}
@@ -108,7 +117,7 @@ const NavBar = () => {
             target={"_blank"}
             className="w-6 mr-2"
           >
-            <LinkedInIcon className="w-[1.8rem] !stroke-primary !fill-primary" />
+            <LinkedInIcon className="w-[1.8rem] !stroke-dark dark:!stroke-light !fill-dark dark:!fill-light" />
           </motion.a>
           <motion.a
             whileHover={{ y: -2 }}
@@ -117,16 +126,7 @@ const NavBar = () => {
             target={"_blank"}
             className="w-6 mr-2"
           >
-            <WhatsappIcon className="w-[1.8rem] !stroke-primary !fill-primary" />
-          </motion.a>
-          <motion.a
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            href="https://medium.com/@majdsoubh"
-            target={"_blank"}
-            className="w-6 mr-2"
-          >
-            <MediumIcon className="w-[1.8rem] !stroke-primary fill-primary" />
+            <WhatsappIcon className="w-[1.8rem] !stroke-dark dark:!stroke-light !fill-dark dark:!fill-light" />
           </motion.a>
           <motion.a
             whileHover={{ y: -2 }}
@@ -135,7 +135,7 @@ const NavBar = () => {
             target={"_blank"}
             className="w-6 mr-2"
           >
-            <FacebookIcon className="w-[1.8rem] !stroke-primary !fill-primary" />
+            <FacebookIcon className="w-[1.8rem] !stroke-dark dark:!stroke-light !fill-dark dark:!fill-light" />
           </motion.a>
           <motion.a
             whileHover={{ y: -2 }}
@@ -144,9 +144,8 @@ const NavBar = () => {
             target={"_blank"}
             className="w-6 mr-2"
           >
-            <TelegramIcon className="w-[1.8rem] !stroke-primary !fill-primary" />
+            <TelegramIcon className="w-[1.8rem] !stroke-dark dark:!stroke-light !fill-dark dark:!fill-light" />
           </motion.a>
-
           {/* Theme */}
           <button
             className={
@@ -203,12 +202,22 @@ const NavBar = () => {
             <motion.a
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
+              href="https://medium.com/@majdsoubh"
+              target={"_blank"}
+              className="w-6 mr-2"
+              toggle={() => setIsOpen(!isOpen)}
+            >
+              <MediumIcon className="w-[1.8rem] dark:stroke-dark dark:fill-dar stroke-light fill-light " />
+            </motion.a>
+            <motion.a
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
               href="https://github.com/MajdSoubh"
               target={"_blank"}
               className="w-6 mr-2 "
               toggle={() => setIsOpen(!isOpen)}
             >
-              <GithubIcon className="w-[1.8rem]" />
+              <GithubIcon className="w-[1.8rem] dark:stroke-dark dark:fill-dark stroke-light fill-light " />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -218,17 +227,7 @@ const NavBar = () => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <LinkedInIcon className="w-[1.8rem]" />
-            </motion.a>
-            <motion.a
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              href="https://medium.com/@majdsoubh"
-              target={"_blank"}
-              className="w-6 mr-2"
-              toggle={() => setIsOpen(!isOpen)}
-            >
-              <MediumIcon className="w-[1.8rem]" />
+              <LinkedInIcon className="w-[1.8rem] dark:stroke-dark dark:fill-dark stroke-light fill-light " />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -238,7 +237,7 @@ const NavBar = () => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <TelegramIcon className="w-[1.8rem]" />
+              <TelegramIcon className="w-[1.8rem] dark:stroke-dark dark:fill-dark stroke-light fill-light " />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -248,7 +247,7 @@ const NavBar = () => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <WhatsappIcon className="w-[1.8rem]" />
+              <WhatsappIcon className="w-[1.8rem] dark:stroke-dark dark:fill-dark stroke-light fill-light " />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -258,7 +257,7 @@ const NavBar = () => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <FacebookIcon className="w-[1.8rem]" />
+              <FacebookIcon className="w-[1.8rem] dark:stroke-dark dark:fill-dark stroke-light fill-light " />
             </motion.a>
             {/* Theme */}
             <button
