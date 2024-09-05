@@ -47,6 +47,7 @@ const FeaturedProject = ({
             transition={{ duration: 0.2 }}
             src={img}
             alt={title}
+            priority
             className={"w-auto h-auto object-fill "}
           />
         </div>
