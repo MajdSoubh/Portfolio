@@ -99,7 +99,7 @@ const NavBar = () => {
             target={"_blank"}
             className="w-6 mr-2 "
           >
-            <GithubIcon className="w-[1.6rem]" />
+            <GithubIcon className="w-[1.8rem] !stroke-primary !fill-primary" />
           </motion.a>
           <motion.a
             whileHover={{ y: -2 }}
@@ -108,7 +108,7 @@ const NavBar = () => {
             target={"_blank"}
             className="w-6 mr-2"
           >
-            <LinkedInIcon className="w-[1.6rem]" />
+            <LinkedInIcon className="w-[1.8rem] !stroke-primary !fill-primary" />
           </motion.a>
           <motion.a
             whileHover={{ y: -2 }}
@@ -117,7 +117,7 @@ const NavBar = () => {
             target={"_blank"}
             className="w-6 mr-2"
           >
-            <WhatsappIcon className="w-[1.6rem]" />
+            <WhatsappIcon className="w-[1.8rem] !stroke-primary !fill-primary" />
           </motion.a>
           <motion.a
             whileHover={{ y: -2 }}
@@ -126,7 +126,7 @@ const NavBar = () => {
             target={"_blank"}
             className="w-6 mr-2"
           >
-            <MediumIcon className="w-[1.6rem]" />
+            <MediumIcon className="w-[1.8rem] !stroke-primary fill-primary" />
           </motion.a>
           <motion.a
             whileHover={{ y: -2 }}
@@ -135,7 +135,7 @@ const NavBar = () => {
             target={"_blank"}
             className="w-6 mr-2"
           >
-            <FacebookIcon className="w-[1.6rem]" />
+            <FacebookIcon className="w-[1.8rem] !stroke-primary !fill-primary" />
           </motion.a>
           <motion.a
             whileHover={{ y: -2 }}
@@ -144,7 +144,7 @@ const NavBar = () => {
             target={"_blank"}
             className="w-6 mr-2"
           >
-            <TelegramIcon className="w-[1.6rem]" />
+            <TelegramIcon className="w-[1.8rem] !stroke-primary !fill-primary" />
           </motion.a>
 
           {/* Theme */}
@@ -157,9 +157,9 @@ const NavBar = () => {
             }}
           >
             {mode == "dark" ? (
-              <SunIcon className="fill-dark w-[1.6rem]" />
+              <SunIcon className="fill-dark w-[1.8rem]" />
             ) : (
-              <MoonIcon className="fill-dark w-[1.6rem]" />
+              <MoonIcon className="fill-dark w-[1.8rem]" />
             )}
           </button>
         </nav>
@@ -208,7 +208,7 @@ const NavBar = () => {
               className="w-6 mr-2 "
               toggle={() => setIsOpen(!isOpen)}
             >
-              <GithubIcon className="w-[1.6rem]" />
+              <GithubIcon className="w-[1.8rem]" />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -218,7 +218,7 @@ const NavBar = () => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <LinkedInIcon className="w-[1.6rem]" />
+              <LinkedInIcon className="w-[1.8rem]" />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -228,7 +228,7 @@ const NavBar = () => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <MediumIcon className="w-[1.6rem]" />
+              <MediumIcon className="w-[1.8rem]" />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -238,7 +238,7 @@ const NavBar = () => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <TelegramIcon className="w-[1.6rem]" />
+              <TelegramIcon className="w-[1.8rem]" />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -248,7 +248,7 @@ const NavBar = () => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <WhatsappIcon className="w-[1.6rem]" />
+              <WhatsappIcon className="w-[1.8rem]" />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -258,7 +258,7 @@ const NavBar = () => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <FacebookIcon className="w-[1.6rem]" />
+              <FacebookIcon className="w-[1.8rem]" />
             </motion.a>
             {/* Theme */}
             <button
@@ -271,9 +271,9 @@ const NavBar = () => {
               }}
             >
               {mode == "dark" ? (
-                <SunIcon className="fill-dark w-[1.6rem]" />
+                <SunIcon className="fill-dark w-[1.8rem]" />
               ) : (
-                <MoonIcon className="fill-dark w-[1.6rem]" />
+                <MoonIcon className="fill-dark w-[1.8rem]" />
               )}
             </button>
           </nav>

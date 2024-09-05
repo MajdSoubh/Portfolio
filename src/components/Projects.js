@@ -20,10 +20,11 @@ const FeaturedProject = ({
   tags = [],
   img,
   imgProd = "./",
-  link = null,
+  links = [],
   github,
   className = "",
 }) => {
+  console.log(process.env.VERCEL_ENV);
   return (
     <motion.div
       key={title}
@@ -39,15 +40,18 @@ const FeaturedProject = ({
       }
     >
       {/* Image */}
-      <div className="w-1/2 h-[200px] lg:w-full lg:h-28 cursor-pointer overflow-hidden rounded-lg ">
+      <div className="w-1/2 h-[300px] lg:w-full lg:max-h-80 cursor-pointer overflow-hidden rounded-lg ">
         <div className="flex items-center justify-center w-full h-full">
           <MotionImage
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
-            src={process.env.NODE_ENV == "development" ? img : imgProd}
+            src={
+              process.env.NODE_ENV == "development" || process.env.VERCEL_ENV
+                ? img
+                : imgProd
+            }
             alt={title}
-            priority
-            className={"w-full h-full "}
+            className={"w-auto h-auto object-fill "}
           />
         </div>
       </div>
@@ -70,19 +74,22 @@ const FeaturedProject = ({
           ))}
         </div>
         {/* Links */}
-        <div className="flex items-center mt-4 justify-between w-full ">
+        <div className="flex items-center mt-4 gap-6 justify-between w-full ">
           <Link href={github} className="w-10" target="_blank">
             <GithubIcon />
           </Link>
-          {link && (
-            <Link
-              href={link}
-              target="_blank"
-              className="ml-4  rounded-lg bg-primary/75 text-light p-2 px-4 text-md font-semibold  sm:px-4 sm:text-base"
-            >
-              Visit Demo
-            </Link>
-          )}
+          <div className="flex gap-2">
+            {links.map((link) => (
+              <Link
+                key={link.link}
+                href={link.link}
+                target="_blank"
+                className=" rounded-lg hover:bg-primary/80 bg-primary transition-colors text-light p-2 px-4 text-md font-semibold  sm:px-4 sm:text-base"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </motion.div>
@@ -95,7 +102,10 @@ const Projects = () => {
       title: "E-Store",
       summary:
         "The online store application enables administrators to add products and view reports, while allowing users to purchase products.",
-      link: "http://lcommerce.atwebpages.com/home",
+      links: [
+        { label: "Demo", link: "http://lcommerce.atwebpages.com" },
+        { label: "Admin", link: "http://lcommerce.atwebpages.com/admin" },
+      ],
       tags: ["Laravel", "Vue", "Vuex", "TailwindCSS"],
       imgProd: "./images/projects/e-store.png",
       img: EStore,
@@ -105,7 +115,6 @@ const Projects = () => {
       title: "Survey Time",
       summary:
         "Web application for creating surveys and sharing them with others to gather their responses.",
-      link: "http://lcommerce.atwebpages.com/home",
       tags: ["Laravel", "Vue", "Vuex"],
       img: Surveys,
       imgProd: "./images/projects/surveys.png",
@@ -115,7 +124,6 @@ const Projects = () => {
       title: "ZIP URL",
       summary:
         "PHP-MVC project aimed at creating and managing short URLs, leveraging the Model-View-Controller (MVC) architectural pattern.",
-      link: "http://lcommerce.atwebpages.com/home",
       tags: ["PHP", "JS", "MVC"],
       img: ZIPURL,
       imgProd: "./images/projects/zip-url.png",
@@ -125,7 +133,6 @@ const Projects = () => {
       title: "PMS",
       summary:
         "PMS web application designed to streamline operations within pharmacies, reducing the need for manual work.",
-      link: "http://lcommerce.atwebpages.com/home",
       img: PMS,
       imgProd: "./images/projects/pms.png",
       tags: ["Laravel", "React", "TailwindCSS"],
@@ -135,19 +142,20 @@ const Projects = () => {
       title: "Imposiable Tic Tac Toe",
       summary:
         "This Tic Tac Toe game uses the Minimax algorithm to determine the best move for the computer player.",
-      link: "http://lcommerce.atwebpages.com/home",
       tags: ["HTML", "CSS", "JS"],
       imgProd: "./images/projects/tic-tac-toe.png",
       img: TicTacToe,
       github: "https://github.com/MajdSoubh/Tic-Tac-Toe/",
-      link: "https://majdsoubh.github.io/Tic-Tac-Toe/",
+      links: "https://majdsoubh.github.io/Tic-Tac-Toe/",
+      links: [
+        { label: "Play it", link: "https://majdsoubh.github.io/Tic-Tac-Toe/" },
+      ],
     },
     {
       title: "Ask Me (C++ Console)",
       summary:
         "AskMe is a C++ console project built using object-oriented concepts that allows users to ask and answer questions.",
       github: "https://github.com/MajdSoubh/AskMe",
-      link: "http://lcommerce.atwebpages.com/home",
       tags: ["C++", "OOB"],
       imgProd: "./images/projects/console.png",
       img: Console,
@@ -189,7 +197,7 @@ const Projects = () => {
             className=" min-h-max"
             title={projects[index].title}
             summary={projects[index].summary}
-            link={projects[index].link}
+            links={projects[index].links}
             type={projects[index].type}
             tags={projects[index].tags}
             imgProd={projects[index].imgProd}

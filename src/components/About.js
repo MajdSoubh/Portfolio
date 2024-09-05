@@ -18,7 +18,7 @@ const About = ({ className = "" }) => {
         {/* Intro */}
         <div className="w-[60%]  lg:!h-[60%] flex flex-col gap-2 items-center self-center lg:w-full lg:text-center">
           <AnimatedText
-            text="Hi all, I'm "
+            text="Hi There, I'm "
             className="!mb-0"
             titleClassName=" !text-6xl  text-left xl:!text-5xl lg:!text-center lg:!text-5xl md:text-5xl sm:!text-3xl"
           />
