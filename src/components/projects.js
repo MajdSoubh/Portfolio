@@ -3,7 +3,7 @@ import { GithubIcon, LeftArrow, RightArrow } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import EStore from "../../public/images/projects/e-store.PNG";
 import Surveys from "../../public/images/projects/surveys.PNG";
 import ZIPURL from "../../public/images/projects/zip-url.PNG";

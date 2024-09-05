@@ -1,31 +1,8 @@
-import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import React from "react";
 import Layout from "./Layout";
 import AnimatedText from "./AnimatedText";
 import { LocationIcon, MailIcon, PhoneIcon } from "./Icons";
 import { motion } from "framer-motion";
-
-const CustomInput = ({ name, label, type = "text" }) => (
-  <div className="w-full flex  justify-center items-center">
-    <label className="w-[30%] capitalize font-medium text-lg xs:text-md">
-      {label}
-    </label>
-    {(type === "text" || type === "email") && (
-      <input
-        className="block w-[70%] py-2 dark:bg-dark rounded border border-primary focus:shadow-primary dark:focus:shadow-primaryDark focus:shadow  dark:border-primaryDark pl-4 focus:outline-none transition-all"
-        type={type}
-        name={name}
-      />
-    )}
-    {type === "textarea" && (
-      <textarea
-        className="block w-[70%] py-2 dark:bg-dark rounded border border-primary focus:shadow-primary focus:shadow dark:focus:shadow-primaryDark dark:border-primaryDark pl-4 focus:outline-none transition-all"
-        rows="3"
-        name={name}
-      />
-    )}
-  </div>
-);
 
 const ContactUs = () => {
   return (
