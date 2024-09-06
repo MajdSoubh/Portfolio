@@ -16,10 +16,10 @@ const Footer = () => {
         <Link href="/"> Majd Soubh</Link>
         <Link href="/">
           <div className="flex gap-4">
-            <TelegramIcon className="w-[1.6rem] !stroke-light !fill-light" />
-            <LinkedInIcon className="w-[1.6rem] !stroke-light !fill-light" />
-            <FacebookIcon className="w-[1.6rem] !stroke-light !fill-light" />
-            <WhatsappIcon className="w-[1.6rem] !stroke-light !fill-light" />
+            <TelegramIcon className="!w-7 !stroke-light !fill-light" />
+            <LinkedInIcon className="!w-7 !stroke-light !fill-light" />
+            <FacebookIcon className="!w-7 !stroke-light !fill-light" />
+            <WhatsappIcon className="!w-7 !stroke-light !fill-light" />
           </div>
         </Link>
       </Layout>
