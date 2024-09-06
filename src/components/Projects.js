@@ -172,7 +172,7 @@ const Projects = () => {
   return (
     <Layout id="projects" className="pt-16 md:!px-8 sm:!px-2">
       <AnimatedText
-        className="mb-16 !text-5xl lg:!text-4xl  xs:!text-3xl"
+        className="mb-4 !text-5xl lg:!text-4xl  xs:!text-3xl"
         text="Projects"
         extra="My Featured Projects"
       />

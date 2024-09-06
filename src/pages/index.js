@@ -6,7 +6,6 @@ import Projects from "@/components/Projects.js";
 import Articles from "@/components/Articles.js";
 import ContactUs from "@/components/Contact.js";
 import Footer from "@/components/Footer";
-
 export default function Home() {
   return (
     <div>

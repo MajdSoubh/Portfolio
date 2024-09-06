@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import Head from "next/head";
 import { Montserrat } from "next/font/google";
 import NavBar from "@/components/Navbar";
+import "../../public/fonts/fontstyle.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
