@@ -43,7 +43,7 @@ const About = ({ className = "" }) => {
               My Resume <LinkArrow className="!w-6 ml-1" />
             </Link>
             <Link
-              href="mailto:majd-52@hotmail.com"
+              href="mailto:eng.majd.soubh@gmail.com"
               className="text-lg underline underline-offset-8 text-dark dark:text-light capitalize font-medium md:text-base"
             >
               Contact Me

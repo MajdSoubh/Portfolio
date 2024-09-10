@@ -40,7 +40,7 @@ const ContactUs = () => {
           {/* Info */}
           <div className="flex flex-col gap-1">
             <p className="font-bold text-xl">Email Me</p>
-            <span className="block">majd-52@hotmail.com</span>
+            <span className="block">eng.majd.soubh@gmail.com</span>
           </div>
         </div>
 
