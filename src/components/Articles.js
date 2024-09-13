@@ -75,6 +75,11 @@ const Articles = () => {
           date="2024-08-21"
           link="https://medium.com/@majdsoubh/implementing-php-routing-with-dynamic-parameters-18940bd80795"
         />
+        <Article
+          title="What is CORS (Cross-Origin-Resource-Sharing)"
+          date="2024-09-13"
+          link="https://medium.com/@majdsoubh/what-is-cors-cross-origin-resource-sharing-39a54bec6ca5"
+        />
       </ul>
     </Layout>
   );
