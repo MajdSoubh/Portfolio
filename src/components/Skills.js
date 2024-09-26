@@ -157,6 +157,11 @@ const Skills = () => {
             name="Git, Github, Gitlab"
             amount="80"
           />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="Docker"
+            amount="60"
+          />
         </SkillList>
       </div>
     </Layout>
