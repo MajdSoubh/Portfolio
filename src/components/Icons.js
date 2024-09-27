@@ -443,7 +443,7 @@ export const MediumIcon = ({ className, ...rest }) => (
     <g
       fill="none"
       fillRule="nonzero"
-      className={"stroke-dark dark:stroke-light !fill-none  " + className}
+      className={"stroke-dark dark:stroke-light !fill-none   " + className}
       strokeWidth="10.12"
       strokeLinecap="butt"
       strokeLinejoin="miter"
@@ -459,7 +459,7 @@ export const MediumIcon = ({ className, ...rest }) => (
     </g>
     <g
       fillRule="nonzero"
-      className={"stroke-dark dark:stroke-light  " + className}
+      className={"stroke-dark dark:stroke-light dark:fill-light  " + className}
       strokeWidth="1"
       strokeLinecap="butt"
       strokeLinejoin="miter"
