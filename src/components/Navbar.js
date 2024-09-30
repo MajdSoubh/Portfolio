@@ -50,12 +50,17 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   );
 };
 
-const NavBar = () => {
+const NavBar = ({ className }) => {
   const [mode, setMode] = useThemeSwitcher();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-light dark:bg-dark dark:text-light w-full px-32 h-20 font-medium flex items-center justify-between relative z-10 lg:px-16 md:px-12 sm:px-8">
+    <header
+      className={
+        " dark:text-light w-full px-32 h-20 font-medium flex items-center justify-between relative z-10 lg:px-16 md:px-12 sm:px-8 " +
+        className
+      }
+    >
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}

@@ -41,9 +41,9 @@ export default function App({ Component, pageProps }) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <NavBar></NavBar>
+      <NavBar className="bg-slate-50 dark:bg-dark"></NavBar>
       <main
-        className={`${montserrat.variable} font-mont w-full  min-h-screen bg-light dark:bg-dark`}
+        className={`${montserrat.variable} font-mont w-full   min-h-screen bg-slate-50 dark:bg-dark`}
       >
         <Component {...pageProps} />
         {/* Footer
