@@ -24,7 +24,6 @@ const FeaturedProject = ({
   github,
   className = "",
 }) => {
-  console.log(process.env);
   return (
     <motion.div
       key={title}
@@ -35,7 +34,7 @@ const FeaturedProject = ({
         duration: 0.5,
       }}
       className={
-        "  w-full h-full flex items-center justify-between relative rounded-lg  bg-light  dark:bg-dark  p-6 py-4 lg:flex-col  " +
+        " border-dark  border-2 hover:text-dark hover:bg-white dark:border-white w-full h-full flex items-center justify-between relative rounded-lg  bg-light  dark:bg-dark  p-6 py-4 lg:flex-col  " +
         className
       }
     >
