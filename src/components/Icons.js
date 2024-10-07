@@ -436,7 +436,7 @@ export const MediumIcon = ({ className, ...rest }) => (
     xmlns="http://www.w3.org/2000/svg"
     width={24}
     height={24}
-    className={`w-full h-auto dark:stroke-light  dark:fill-light ${className}`}
+    className={`w-full h-auto border-[1px] rounded-full border-dark dark:border-white  dark:stroke-light  dark:fill-light ${className}`}
     {...rest}
     viewBox="0,0,256,256"
   >

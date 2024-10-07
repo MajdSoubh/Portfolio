@@ -104,7 +104,7 @@ const NavBar = ({ className }) => {
             target={"_blank"}
             className="w-6 mr-2"
           >
-            <MediumIcon className="w-[1.8rem] !stroke-dark dark:!stroke-light fill-dark " />
+            <MediumIcon className="w-[1.8rem]   !stroke-dark dark:!stroke-light fill-dark " />
           </motion.a>
           <motion.a
             whileHover={{ y: -2 }}
@@ -212,7 +212,7 @@ const NavBar = ({ className }) => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <MediumIcon className="w-[1.8rem] dark:stroke-dark dark:fill-dar stroke-light fill-light " />
+              <MediumIcon className="w-[1.8rem] dark:border-dark border-white dark:!stroke-dark dark:fill-light stroke-light fill-light " />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -222,7 +222,7 @@ const NavBar = ({ className }) => {
               className="w-6 mr-2 "
               toggle={() => setIsOpen(!isOpen)}
             >
-              <GithubIcon className="w-[1.8rem] dark:stroke-dark dark:fill-dark stroke-light fill-light " />
+              <GithubIcon className="w-[1.8rem] dark:!stroke-dark dark:!fill-dark stroke-light fill-light " />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -232,7 +232,7 @@ const NavBar = ({ className }) => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <LinkedInIcon className="w-[1.8rem] dark:stroke-dark dark:fill-dark stroke-light fill-light " />
+              <LinkedInIcon className="w-[1.8rem] dark:!stroke-dark dark:!fill-dark stroke-light fill-light " />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -242,7 +242,7 @@ const NavBar = ({ className }) => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <TelegramIcon className="w-[1.8rem] dark:stroke-dark dark:fill-dark stroke-light fill-light " />
+              <TelegramIcon className="w-[1.8rem] dark:!stroke-dark dark:!fill-dark stroke-light fill-light " />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -252,7 +252,7 @@ const NavBar = ({ className }) => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <WhatsappIcon className="w-[1.8rem] dark:stroke-dark dark:fill-dark stroke-light fill-light " />
+              <WhatsappIcon className="w-[1.8rem] dark:!stroke-dark dark:!fill-dark stroke-light fill-light " />
             </motion.a>
             <motion.a
               whileHover={{ y: -2 }}
@@ -262,7 +262,7 @@ const NavBar = ({ className }) => {
               className="w-6 mr-2"
               toggle={() => setIsOpen(!isOpen)}
             >
-              <FacebookIcon className="w-[1.8rem] dark:stroke-dark dark:fill-dark stroke-light fill-light " />
+              <FacebookIcon className="w-[1.8rem] dark:!stroke-dark dark:!fill-dark stroke-light fill-light " />
             </motion.a>
             {/* Theme */}
             <button
