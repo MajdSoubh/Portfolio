@@ -5,7 +5,7 @@ import { BackendIcon, DownArrowIcon, FrontendIcon } from "./Icons";
 import AnimatedText from "./AnimatedText";
 
 const SkillList = ({ children, name, className = "", icon = null }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   return (
     <div
       className={
