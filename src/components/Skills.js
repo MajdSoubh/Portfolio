@@ -112,7 +112,12 @@ const Skills = () => {
           />
           <Skill
             className="md:col-span-2 col-span-1"
-            name="JavaScript, Ajax, JQuery"
+            name="JavaScript"
+            amount="80"
+          />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="Ajax, JQuery"
             amount="80"
           />
           <Skill
