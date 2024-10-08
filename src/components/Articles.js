@@ -80,6 +80,11 @@ const Articles = () => {
           date="2024-09-13"
           link="https://medium.com/@majdsoubh/what-is-cors-cross-origin-resource-sharing-39a54bec6ca5"
         />
+        <Article
+          title="Exposing Common Web Vulnerabilities"
+          date="2024-09-10"
+          link="https://medium.com/@majdsoubh/exposing-common-web-vulnerabilities-be4ac446e5ed"
+        />
       </ul>
     </Layout>
   );
