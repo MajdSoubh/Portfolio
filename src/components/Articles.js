@@ -85,6 +85,11 @@ const Articles = () => {
           date="2024-09-10"
           link="https://medium.com/@majdsoubh/exposing-common-web-vulnerabilities-be4ac446e5ed"
         />
+        <Article
+          title="Understanding JWT (JSON Web Token)"
+          date="2024-10-12"
+          link="https://medium.com/@majdsoubh/understanding-jwt-json-web-token-177ce1e7d38a"
+        />
       </ul>
     </Layout>
   );
