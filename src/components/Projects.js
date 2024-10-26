@@ -8,7 +8,7 @@ import EStore from "../../public/images/projects/e-store.PNG";
 import Surveys from "../../public/images/projects/surveys.PNG";
 import ZIPURL from "../../public/images/projects/zip-url.PNG";
 import Terminal from "../../public/images/projects/laravel-terminal.jpg";
-import Treeify from "../../public/images/projects/treeify.jpg";
+import Treeify from "../../public/images/projects/treeify.jpeg";
 import TicTacToe from "../../public/images/projects/tic-tac-toe.png";
 import Console from "../../public/images/projects/console.png";
 import PMS from "../../public/images/projects/pms.PNG";
