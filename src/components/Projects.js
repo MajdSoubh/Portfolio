@@ -7,6 +7,8 @@ import React, { useState } from "react";
 import EStore from "../../public/images/projects/e-store.PNG";
 import Surveys from "../../public/images/projects/surveys.PNG";
 import ZIPURL from "../../public/images/projects/zip-url.PNG";
+import Terminal from "../../public/images/projects/laravel-terminal.jpg";
+import Treeify from "../../public/images/projects/treeify.jpg";
 import TicTacToe from "../../public/images/projects/tic-tac-toe.png";
 import Console from "../../public/images/projects/console.png";
 import PMS from "../../public/images/projects/pms.PNG";
@@ -133,6 +135,22 @@ const Projects = () => {
       imgProd: "./images/projects/pms.png",
       tags: ["Laravel", "React", "TailwindCSS"],
       github: "https://github.com/MajdSoubh/PMS",
+    },
+    {
+      title: "Laravel Terminal",
+      summary:
+        "A Laravel package that allows you to interact with a shell environment directly from your browser. This tool is designed for development purposes only and should not be used in production environments due to security risks associated with exposing shell access.",
+      tags: ["Laravel", "PHP"],
+      img: Terminal,
+      github: "https://github.com/MajdSoubh/Laravel-Terminal",
+    },
+    {
+      title: "Treeify",
+      summary:
+        "This Laravel package provides an elegant solution for retrieve and display a model's self-relation as a nested tree.",
+      tags: ["Laravel", "PHP"],
+      img: Treeify,
+      github: "https://github.com/MajdSoubh/Treeify",
     },
     {
       title: "Imposiable Tic Tac Toe",
