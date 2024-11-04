@@ -90,6 +90,11 @@ const Articles = () => {
           date="2024-10-12"
           link="https://medium.com/@majdsoubh/understanding-jwt-json-web-token-177ce1e7d38a"
         />
+        <Article
+          title="How Dependency Injection, Inversion of Control, and IoC Containers Improve Code Flexibility"
+          date="2024-11-04"
+          link="https://medium.com/@majdsoubh/how-dependency-injection-inversion-of-control-and-ioc-containers-improve-code-flexibility-e7e7943e8d0e"
+        />
       </ul>
     </Layout>
   );
