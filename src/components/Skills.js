@@ -146,10 +146,15 @@ const Skills = () => {
             name="Laravel, PHP"
             amount="80"
           />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="Node.js, express.js"
+            amount="80"
+          />
           <Skill className="md:col-span-2 col-span-1" name="C++" amount="65" />
           <Skill
             className="md:col-span-2 col-span-1"
-            name="Mysql"
+            name="Mysql, MongoDB"
             amount="75"
           />
           <Skill
