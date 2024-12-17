@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import EStore from "../../public/images/projects/e-store.PNG";
-import Memonto from "../../public/images/projects/memonto-homepage.pmg";
+import Memonto from "../../public/images/projects/memonto-homepage.png";
 import Surveys from "../../public/images/projects/surveys.PNG";
 import ZIPURL from "../../public/images/projects/zip-url.PNG";
 import Terminal from "../../public/images/projects/laravel-terminal.jpg";
