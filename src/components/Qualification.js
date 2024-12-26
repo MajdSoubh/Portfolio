@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
 import Layout from "./Layout";
@@ -77,21 +77,7 @@ const Qualification = () => {
     offset: ["start end", "end center"],
   });
 
-  const [timeLineData, setTimeLineData] = useState([
-    {
-      position: "Software Engineer",
-      companyLink: "http://intenta.de",
-      company: "SCASE",
-      time: "2023-Present",
-      address: "Syria, Tartous",
-      work: "SCASE LTD, is a subsidiary of Intenta GmbH in Germany, focuses on developing smart sensors and car driving assistant products.",
-      accomplishments: [
-        "Refactored 6+ key components, improving code efficiency by 30%",
-        "Analyzing and improving car localization algorithms to maintain accuracy and stability",
-        "Implemented comprehensive test suites, ensuring functionality and compliance with intended requirements across multiple features",
-      ],
-    },
-  ]);
+  const [timeLineData, setTimeLineData] = useState([]);
   const [IsWork, setIsWork] = useState(true);
 
   const showWork = () => {
@@ -142,6 +128,10 @@ const Qualification = () => {
     setTimeLineData(content);
     setIsWork(false);
   };
+
+  useEffect(() => {
+    showWork();
+  }, []);
 
   return (
     <Layout>
