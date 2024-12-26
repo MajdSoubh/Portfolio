@@ -8,7 +8,7 @@ import AnimatedText from "./AnimatedText";
 const WorkDetials = ({
   position,
   company,
-  companyLink,
+  companyLink = null,
   time,
   address,
   work,
@@ -28,7 +28,7 @@ const WorkDetials = ({
           <a
             target="_blank"
             className="text-primary dark:text-primaryDark capitalize"
-            href={companyLink}
+            href={companyLink || "#"}
           >
             @{company}
           </a>
@@ -99,14 +99,25 @@ const Qualification = () => {
       {
         position: "Software Engineer",
         companyLink: "http://intenta.de",
-        company: "SCASE",
-        time: "2023-Present",
-        address: "Syria, Tartous",
-        work: "SCASE LTD, is a subsidiary of Intenta GmbH in Germany, focuses on developing smart sensors and car driving assistant products.",
+        company: "Lit",
+        time: "Nov 2023 - Jun 2024",
+        address: "Lebanon, Remote",
+        work: "LIT, is a subsidiary of Intenta GmbH in Germany, focuses on developing smart sensors and car driving assistant products.",
         accomplishments: [
           "Refactored 6+ key components, improving code efficiency by 30%",
           "Analyzing and improving car localization algorithms to maintain accuracy and stability",
           "Implemented comprehensive test suites, ensuring functionality and compliance with intended requirements across multiple features",
+        ],
+      },
+      {
+        position: "Full-Stack Developer",
+        company: "Freelancer",
+        time: "2021-Present",
+        address: "Remote",
+        work: "Launched custom web applications for 4 clients, leveraging PHP, Laravel, React and Vue.js to meet their needs.",
+        accomplishments: [
+          "Worked on planning, designing, developing and testing small to mid-scaled projects",
+          "Continuous maintainance for the systems",
         ],
       },
     ];
@@ -201,7 +212,7 @@ const Qualification = () => {
                 company={data.company}
                 companyLink={data.companyLink}
                 time={data.time}
-                place={data.place}
+                address={data.address}
                 work={data.work}
                 accomplishments={data.accomplishments}
               />
