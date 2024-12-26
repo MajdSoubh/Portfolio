@@ -85,14 +85,15 @@ const Qualification = () => {
       {
         position: "Software Engineer",
         companyLink: "http://intenta.de",
-        company: "Lit",
+        company: "LIT",
         time: "Nov 2023 - Jun 2024",
         address: "Lebanon, Remote",
         work: "LIT, is a subsidiary of Intenta GmbH in Germany, focuses on developing smart sensors and car driving assistant products.",
         accomplishments: [
+          "Collaborating with cross-functional teams to optimize localization algorithms, resulting in a 25% increase in availability and ensuring continuous service for end-users",
           "Refactored 6+ key components, improving code efficiency by 30%",
-          "Analyzing and improving car localization algorithms to maintain accuracy and stability",
-          "Implemented comprehensive test suites, ensuring functionality and compliance with intended requirements across multiple features",
+          "Generating automated tests for 5 critical features, resulting in improved feature stability",
+          "Performed code reviews, ensuring high-quality code and consistent development standards",
         ],
       },
       {
