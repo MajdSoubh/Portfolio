@@ -117,7 +117,12 @@ const Skills = () => {
           />
           <Skill
             className="md:col-span-2 col-span-1"
-            name="Ajax, JQuery"
+            name="JQuery"
+            amount="60"
+          />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="Ajax "
             amount="80"
           />
           <Skill
@@ -128,7 +133,12 @@ const Skills = () => {
           <Skill
             className="md:col-span-2 col-span-1"
             name="React"
-            amount="50"
+            amount="80"
+          />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="Redux"
+            amount="70"
           />
           <Skill
             className="md:col-span-2 col-span-1"
@@ -151,7 +161,7 @@ const Skills = () => {
             name="Node.js, express.js"
             amount="80"
           />
-          <Skill className="md:col-span-2 col-span-1" name="C++" amount="65" />
+          <Skill className="md:col-span-2 col-span-1" name="C++" amount="70" />
           <Skill
             className="md:col-span-2 col-span-1"
             name="Mysql, MongoDB"
@@ -160,6 +170,11 @@ const Skills = () => {
           <Skill
             className="md:col-span-2 col-span-1"
             name="OOP, Design Patterns"
+            amount="70"
+          />
+          <Skill
+            className="md:col-span-2 col-span-1"
+            name="Socket.io"
             amount="70"
           />
           <Skill
