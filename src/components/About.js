@@ -28,10 +28,10 @@ const About = ({ className = "" }) => {
             titleClassName=" !text-yellow-500 !text-6xl text-left xl:!text-5xl lg:!text-center lg:!text-5xl md:text-5xl sm:!text-3xl"
           />
           <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
-            A Backend Specialist with a solid grounding in front-end tools like
-            Vue.js and React with ability of developing full-stack applications
-            from concept to deployment, and adept at collaborating with an
-            international teams.
+            A Backend Specialist with a solid grounding in front-end frameworks
+            like Vue.js and React. Proven ability to develop full-stack
+            applications from concept to deployment, adept at collaborating
+            effectively with an international teams.
           </p>
           <div className="flex items-center gap-6 self-start mt-2 lg:self-center">
             <Link
