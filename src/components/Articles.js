@@ -95,6 +95,11 @@ const Articles = () => {
           date="2024-11-04"
           link="https://medium.com/@majdsoubh/how-dependency-injection-inversion-of-control-and-ioc-containers-improve-code-flexibility-e7e7943e8d0e"
         />
+        <Article
+          title="Building a Simple IoC Container in PHP"
+          date="2024-12-28"
+          link="https://medium.com/@majdsoubh/building-a-simple-ioc-container-in-php-4944d2b848a9"
+        />
       </ul>
     </Layout>
   );
